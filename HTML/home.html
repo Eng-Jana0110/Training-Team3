@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Our Website is about marketing ">
+    <link rel="shortcut icon" href="../assests/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/shop.css">
+    <link rel="stylesheet" href="../CSS/style2.css">
+    <title>DR.LOUBNA - Ecom Home</title>
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        .dl-home {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fff;
+            color: #222;
+            padding-top: 25px;
+        }
+
+        .dl-container {
+            width: 94%;
+            max-width: 1280px;
+            margin: auto
+        }
+
+        .dl-section {
+            margin-bottom: 45px
+        }
+
+        .dl-head {
+            margin-bottom: 24px
+        }
+
+        .dl-title {
+            font-size: 26px;
+            margin: 0 0 7px;
+            font-weight: 700
+        }
+
+        .dl-sub {
+            color: #777;
+            font-size: 14px;
+            margin: 0
+        }
+
+        .dl-cats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px
+        }
+
+        .dl-cat {
+            border: 1px solid #e6e6e6;
+            border-radius: 5px;
+            padding: 22px 20px;
+            min-height: 210px;
+            background: #fff;
+            transition: .25s
+        }
+
+        .dl-cat:hover,
+        .dl-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .07)
+        }
+
+        .dl-cat-icon {
+            font-size: 31px;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: #f1f6ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 13px
+        }
+
+        .dl-cat h3 {
+            font-size: 17px;
+            margin: 0 0 10px
+        }
+
+        .dl-cat ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 12px
+        }
+
+        .dl-cat li {
+            font-size: 13px;
+            line-height: 1.75;
+            color: #777
+        }
+
+        .dl-view {
+            color: #2864d7;
+            font-size: 13px;
+            font-weight: 600
+        }
+
+        .dl-promos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px
+        }
+
+        .dl-promo {
+            height: 225px;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            padding: 30px;
+            display: flex;
+            align-items: center
+        }
+
+        .dl-promo:nth-child(1) {
+            background: #eaf4ff
+        }
+
+        .dl-promo:nth-child(2) {
+            background: #f7f3ea
+        }
+
+        .dl-promo:nth-child(3) {
+            background: #eaf7f2
+        }
+
+        .dl-promo-text {
+            width: 58%;
+            position: relative;
+            z-index: 2
+        }
+
+        .dl-promo small {
+            color: #777
+        }
+
+        .dl-promo h3 {
+            font-size: 21px;
+            line-height: 1.3;
+            margin: 8px 0 10px
+        }
+
+        .dl-promo p {
+            font-size: 13px;
+            color: #666;
+            margin: 0
+        }
+
+        .dl-promo img {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 47%;
+            height: 100%;
+            object-fit: contain
+        }
+
+        .dl-learn {
+            display: inline-block;
+            margin-top: 14px;
+            color: #2864d7;
+            font-size: 13px;
+            font-weight: 600
+        }
+
+        .dl-product-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 20px;
+            margin-bottom: 22px
+        }
+
+        .dl-tabs {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap
+        }
+
+        .dl-tab {
+            border: 0;
+            background: transparent;
+            padding: 9px 14px;
+            color: #666;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 13px
+        }
+
+        .dl-tab:hover,
+        .dl-tab.active {
+            background: #2864d7;
+            color: #fff
+        }
+
+        .dl-products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 17px
+        }
+
+        .dl-card {
+            position: relative;
+            border: 1px solid #e6e6e6;
+            border-radius: 5px;
+            overflow: hidden;
+            background: #fff;
+            transition: .25s
+        }
+
+        .dl-badge {
+            position: absolute;
+            top: 11px;
+            left: 11px;
+            background: #e64c4c;
+            color: #fff;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-size: 11px;
+            z-index: 2
+        }
+
+        .dl-img {
+            height: 205px;
+            background: #fafafa;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .dl-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain
+        }
+
+        .dl-info {
+            padding: 16px
+        }
+
+        .dl-brand {
+            font-size: 12px;
+            color: #777;
+            margin-bottom: 7px
+        }
+
+        .dl-name {
+            font-size: 14px;
+            line-height: 1.45;
+            min-height: 42px;
+            margin: 0
+        }
+
+        .dl-rating {
+            color: #f3a51b;
+            font-size: 13px;
+            margin: 8px 0
+        }
+
+        .dl-price {
+            margin: 9px 0 14px
+        }
+
+        .dl-now {
+            font-size: 18px;
+            font-weight: 700
+        }
+
+        .dl-old {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 12px;
+            margin-left: 7px
+        }
+
+        .dl-cart {
+            width: 100%;
+            border: 1px solid #dce4ef;
+            background: #fff;
+            color: #2864d7;
+            padding: 9px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600
+        }
+
+        .dl-cart:hover {
+            background: #2864d7;
+            color: #fff
+        }
+
+        .dl-deals {
+            border: 1px solid #e6e6e6;
+            border-radius: 5px;
+            padding: 25px
+        }
+
+        .dl-deal-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 22px
+        }
+
+        .dl-count-title {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 7px
+        }
+
+        .dl-count {
+            display: flex;
+            gap: 6px
+        }
+
+        .dl-time {
+            min-width: 48px;
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 7px 5px;
+            border-radius: 3px;
+            font-size: 14px
+        }
+
+        .dl-time small {
+            display: block;
+            color: #bbb;
+            font-size: 8px;
+            margin-top: 2px
+        }
+
+        .dl-deal-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 17px
+        }
+
+        @media(max-width:1050px) {
+
+            .dl-cats,
+            .dl-products {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .dl-promos {
+                grid-template-columns: 1fr
+            }
+        }
+
+        @media(max-width:700px) {
+
+            .dl-cats,
+            .dl-products,
+            .dl-deal-grid {
+                grid-template-columns: 1fr
+            }
+
+            .dl-product-head,
+            .dl-deal-head {
+                flex-direction: column;
+                align-items: flex-start
+            }
+
+            .dl-promo-text {
+                width: 62%
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+    </div>
+
+    <div class="cart-card">
+        <div class="top-cart d-flex justify-content-between align-items-center">
+            <h3>Shopping Cart</h3>
+            <div class="close-cart" onclick="close_cart()">
+                <i class="bi bi-x-lg"></i>
+            </div>
+        </div>
+
+
+        <div class="items-in-cart">
+            <!--Java-->
+        </div>
+
+        <div class="bottom-cart">
+            <div class="total d-flex justify-content-between align-items-center">
+                <span>Total:</span>
+                <span id="total-price-shop" class="price-cart-total">$0.00</span>
+            </div>
+            <div class="btn-cart d-flex gap-2">
+                <a href="./shop.html" class="btn btn-sm btn-cart-btn1 w-100 text-center text-decoration-none">View
+                    Cart</a>
+            </div>
+        </div>
+    </div>
+    <!--We Must Add It in All Pages-->
+        <div class="wishlist-card">
+            <div class="wishlist-header d-flex align-items-center justify-content-between">
+
+                <h3>My WishList</h3>
+
+                <span class="wishlist-close" onclick="close_wish()">
+                    <i class="bi bi-x-circle"></i>
+                </span>
+
+            </div>
+
+            <div class="wishlist-items">
+                <!-- Items in JS -->
+            </div>
+        </div>
+        <!--Until Here-->
+    <section class="main-margin dl-home">
+
+        <div class="dl-container">
+            <section class="dl-section">
+                <div class="dl-head">
+                    <h2 class="dl-title">Featured Categories</h2>
+                    <p class="dl-sub">Choose your necessary products from this feature categories.</p>
+                </div>
+                <div class="dl-cats" id="dlCategories"></div>
+            </section>
+            <section class="dl-section">
+                <div class="dl-promos">
+                    <div class="dl-promo">
+                        <div class="dl-promo-text"><small>Starting from $899</small>
+                            <h3>iPhone 12 Pro 128Gb</h3>
+                            <p>Special Sale</p><span class="dl-learn">learn more →</span>
+                        </div><img src="https://wp.alithemes.com/html/ecom/demo/assets/imgs/page/homepage1/screen-3.png"
+                            alt="iPhone promotional product">
+                    </div>
+                    <div class="dl-promo">
+                        <div class="dl-promo-text"><small>New Arrivals</small>
+                            <h3>Samsung 2022 Led TV</h3>
+                            <p>Special Sale</p><span class="dl-learn">learn more →</span>
+                        </div><img src="https://wp.alithemes.com/html/ecom/demo/assets/imgs/page/homepage1/screen-2.png"
+                            alt="Samsung promotional product">
+                    </div>
+                    <div class="dl-promo">
+                        <div class="dl-promo-text"><small>Special Sale</small>
+                            <h3>Drone Quadcopter UAV - DJI Air 2S</h3>
+                            <p>Gimbal Camera, 5.4K Video</p><span class="dl-learn">learn more →</span>
+                        </div><img src="https://wp.alithemes.com/html/ecom/demo/assets/imgs/page/homepage1/screen.png"
+                            alt="DJI promotional product">
+                    </div>
+                </div>
+            </section>
+            <section class="dl-section">
+                <div class="dl-product-head">
+                    <div class="dl-head" style="margin:0">
+                        <h2 class="dl-title">Best Sellers</h2>
+                        <p class="dl-sub">Special products in this month.</p>
+                    </div>
+                    <div class="dl-tabs"><button class="dl-tab active" data-filter="all">All</button><button
+                            class="dl-tab" data-filter="Best seller">Best seller</button><button class="dl-tab"
+                            data-filter="Most viewed">Most viewed</button><button class="dl-tab"
+                            data-filter="Top Brands">Top Brands</button></div>
+                </div>
+                <div class="dl-products" id="dlProducts"></div>
+            </section>
+            <section class="dl-section">
+                <div class="dl-deals">
+                    <div class="dl-deal-head">
+                        <div class="dl-head" style="margin:0">
+                            <h2 class="dl-title">Latest Deals</h2>
+                            <p class="dl-sub">Special products in this month.</p>
+                        </div>
+                        <div>
+                            <div class="dl-count-title">Hurry up! Offers end in:</div>
+                            <div class="dl-count">
+                                <div class="dl-time"><span id="dlDays">00</span><small>Days</small></div>
+                                <div class="dl-time"><span id="dlHours">00</span><small>Hours</small></div>
+                                <div class="dl-time"><span id="dlMinutes">00</span><small>Minutes</small></div>
+                                <div class="dl-time"><span id="dlSeconds">00</span><small>Seconds</small></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dl-deal-grid" id="dlDeals"></div>
+                </div>
+            </section>
+        </div>
+        
+
+
+    </section>
+    
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+
+            <div class="footer-column">
+
+                <a href="index.html" class="footer-logo">
+                    E<span>com</span>
+                </a>
+
+                <h3>Contact</h3>
+
+                <p>
+                    Address: 502 New Design Str, Melbourne,
+                    San Francisco, CA 94110, United States
+                </p>
+
+                <p>
+                    Phone: (+01) 123-456-789
+                </p>
+
+                <p>
+                    E-mail: support@ecom.com
+                </p>
+
+                <p>
+                    Hours: 8:00 - 17:00, Mon - Sat
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Make Money with Us</h3>
+
+                <a href="pages/about.html">
+                    Mission & Vision
+                </a>
+
+                <a href="pages/about.html">
+                    Our Team
+                </a>
+
+                <a href="pages/careers.html">
+                    Careers
+                </a>
+
+                <a href="#">
+                    Press & Media
+                </a>
+
+                <a href="#">
+                    Advertising
+                </a>
+
+                <a href="#">
+                    Testimonials
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Company</h3>
+
+                <a href="blog/index.html">
+                    Our Blog
+                </a>
+
+                <a href="#">
+                    Plans & Pricing
+                </a>
+
+                <a href="#">
+                    Knowledge Base
+                </a>
+
+                <a href="#">
+                    Cookie Policy
+                </a>
+
+                <a href="#">
+                    Office Center
+                </a>
+
+                <a href="blog/index.html">
+                    News & Events
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>My Account</h3>
+
+                <a href="dashboard/index.html">
+                    FAQs
+                </a>
+
+                <a href="dashboard/index.html">
+                    Editor Help
+                </a>
+
+                <a href="dashboard/index.html">
+                    Community
+                </a>
+
+                <a href="#">
+                    Live Chatting
+                </a>
+
+                <a href="contact/index.html">
+                    Contact Us
+                </a>
+
+                <a href="#">
+                    Support Center
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>App & Payment</h3>
+
+                <p>
+                    Download our Apps and get extra 15%
+                    Discount on your first Order!
+                </p>
+
+                <div class="app-buttons">
+
+                    <button>
+                        ▶ Google Play
+                    </button>
+
+                    <button>
+                         App Store
+                    </button>
+
+                </div>
+
+                <h4>
+                    Secured Payment Gateways
+                </h4>
+
+                <div class="payment-icons">
+                    💳 💳 💳 💳
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-brands">
+
+            <div class="container">
+
+                <strong>Electronic:</strong>
+
+                <span>Cell Phones</span>
+                <span>Headphones</span>
+                <span>Television & Video</span>
+                <span>Game Controller</span>
+                <span>Apple Watch</span>
+                <span>iPad</span>
+                <span>Keyboard</span>
+                <span>Samsung</span>
+                <span>Wireless Speaker</span>
+                <span>Gaming Mouse</span>
+
+            </div>
+
+
+            <div class="container">
+
+                <strong>Furniture:</strong>
+
+                <span>Sofa</span>
+                <span>Chair</span>
+                <span>Dining Table</span>
+                <span>Living Room</span>
+                <span>Table Lamp</span>
+                <span>Computer Desk</span>
+                <span>Night Stand</span>
+                <span>Kitchen</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+            Copyright © 2022 Ecom Market. All rights reserved.
+        </div>
+
+    </footer>
+
+
+
+
+
+
+
+
+    <script src="../JavaScript/shop.js"></script>
+    <script src="../JavaScript/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const dlCategories = [
+            { name: 'Smart Phone', icon: '📱', items: ['Phone Accessories', 'Phone Cases', 'Postpaid Phones', 'Refurbished Phones'] },
+            { name: 'Television', icon: '📺', items: ['HD DVD Players', 'Projection Screens', 'Television Accessories', 'TV-DVD Combos'] },
+            { name: 'Computers', icon: '💻', items: ['Computer Components', 'Computer Accessories', 'Desktops', 'Monitors'] },
+            { name: 'Electronics', icon: '🔌', items: ['Office Electronics', 'Portable Audio & Video', 'Washing Machine', 'Accessories & Supplies'] },
+            { name: 'Laptop & Tablet', icon: '💻', items: ['Office laptop', 'Gaming laptop', 'Laptop accessories', 'Tablet'] },
+            { name: 'Smartwatches', icon: '⌚', items: ['Sport Watches', 'Chronograph Watches', 'Kids Watches', 'Luxury Watches'] },
+            { name: 'Gaming', icon: '🎮', items: ['Game Controllers', 'Gaming Keyboards', 'PC Gaming Mice', 'PC Game Headsets'] },
+            { name: 'Outdoor Camera', icon: '📷', items: ['Security & Surveillance', 'Surveillance DVR Kits', 'Surveillance NVR Kits', 'Smart Outdoor Lighting'] }
+        ];
+        const dlProducts = [
+            { id:201, brand: 'Apple', name: '2022 Apple iMac with Retina 5K Display 8GB RAM, 256GB SSD', price: '2856.3', old: '3225.6', type: 'Best seller', image: 'https://wp.alithemes.com/html/ecom/demo/assets/imgs/page/homepage1/screen.png' },
+            { id:202, brand: 'Philips', name: 'Philips H4205 On-Ear Wireless Headphones with 32mm', price: '154.0', old: '162.5', type: 'Most viewed', image: 'https://wp.alithemes.com/html/ecom/demo/assets/imgs/page/homepage1/screen-2.png' },
+            { id:203, brand: 'Apple', name: '2020 Apple MacBook Air Laptop: Apple M1 Chip, 13”', price: '2325.3', old: '2225.6', type: 'Top Brands', image: 'https://wp.alithemes.com/html/ecom/demo/assets/imgs/page/homepage1/screen-3.png' },
+            { id:204, brand: 'Apple', name: 'Apple Watch Series 8 [GPS 45mm] Smart Watch', price: '530.3', old: '560.6', type: 'Best seller', image: 'https://wp.alithemes.com/html/ecom/demo/assets/imgs/page/homepage1/screen-2.png' },
+            { id:205, brand: 'Kami Tech', name: 'Kami by YI 4pc 1080p Home Security Cameras', price: '156.3', old: '250.6', type: 'Most viewed', image: 'https://wp.alithemes.com/html/ecom/demo/assets/imgs/page/homepage1/screen-3.png' },
+            { id:206, brand: 'Apple', name: 'Apple MacBook Air Laptop', price: '999.0', old: '1199.0', type: 'Top Brands', image: 'https://wp.alithemes.com/html/ecom/demo/assets/imgs/page/homepage1/screen.png' },
+            { id:207, brand: 'Samsung', name: 'Samsung Smart LED Television', price: '899.0', old: '1050.0', type: 'Best seller', image: 'https://wp.alithemes.com/html/ecom/demo/assets/imgs/page/homepage1/screen-2.png' },
+            { id:208, brand: 'DJI', name: 'Drone Quadcopter UAV - DJI Air 2S', price: '749.0', old: '899.0', type: 'Most viewed', image: 'https://wp.alithemes.com/html/ecom/demo/assets/imgs/page/homepage1/screen-3.png' }
+        ]
+        const dlCategoriesBox = document.getElementById('dlCategories'), dlProductsBox = document.getElementById('dlProducts'), dlDealsBox = document.getElementById('dlDeals');
+        function dlDisplayCategories() { dlCategoriesBox.innerHTML = ''; for (let i = 0; i < dlCategories.length; i++) { let c = dlCategories[i], items = ''; for (let j = 0; j < c.items.length; j++) { items += '<li>' + c.items[j] + '</li>' } dlCategoriesBox.innerHTML += `<article class="dl-cat"><div class="dl-cat-icon">${c.icon}</div><h3>${c.name}</h3><ul>${items}</ul><span class="dl-view">View all</span></article>` } }
+        function dlCard(p, i, badge = '-17%') { return `<article class="dl-card"><span class="dl-badge">${badge}</span><div class="dl-img"><img src="${p.image}" alt="${p.name}"></div><div class="dl-info"><div class="dl-brand">${p.brand}</div><h3 class="dl-name">${p.name}</h3><div class="dl-rating">★★★★★ <span style="color:#999">(65)</span></div><div class="dl-price"><span class="dl-now">$${p.price}</span><span class="dl-old">$${p.old}</span></div><button class="dl-cart" onclick="dlAddToCart(${i})">Add To Cart</button></div></article>` }
+        function dlDisplayProducts(list) { dlProductsBox.innerHTML = ''; if (list.length === 0) { dlProductsBox.innerHTML = '<p>No products found.</p>'; return } for (let i = 0; i < list.length; i++) { dlProductsBox.innerHTML += dlCard(list[i], i) } }
+        function dlDisplayDeals() { dlDealsBox.innerHTML = ''; for (let i = 0; i < 3; i++) { dlDealsBox.innerHTML += dlCard(dlProducts[i], i, 'DEAL') } }
+        function dlFilterProducts(filter) { if (filter === 'all') { dlDisplayProducts(dlProducts); return } let filtered = []; for (let i = 0; i < dlProducts.length; i++) { if (dlProducts[i].type === filter) { filtered.push(dlProducts[i]) } } dlDisplayProducts(filtered) }
+        const dlTabs = document.querySelectorAll('.dl-tab'); for (let i = 0; i < dlTabs.length; i++) { dlTabs[i].addEventListener('click', function () { for (let j = 0; j < dlTabs.length; j++) { dlTabs[j].classList.remove('active') } this.classList.add('active'); dlFilterProducts(this.getAttribute('data-filter')) }) }
+        function dlAddToCart(index)
+         { let product = dlProducts[index];
+             AddFriendToCart(product.id, product.name,product.price,product.image);
+
+         }
+        let dlTime = 3 * 24 * 60 * 60; function dlUpdateCountdown() { if (dlTime < 0) { dlTime = 3 * 24 * 60 * 60 } let d = Math.floor(dlTime / (24 * 60 * 60)), h = Math.floor((dlTime % (24 * 60 * 60)) / (60 * 60)), m = Math.floor((dlTime % (60 * 60)) / 60), s = dlTime % 60; document.getElementById('dlDays').textContent = String(d).padStart(2, '0'); document.getElementById('dlHours').textContent = String(h).padStart(2, '0'); document.getElementById('dlMinutes').textContent = String(m).padStart(2, '0'); document.getElementById('dlSeconds').textContent = String(s).padStart(2, '0'); dlTime-- }
+        dlDisplayCategories(); dlDisplayProducts(dlProducts); dlDisplayDeals(); dlUpdateCountdown(); setInterval(dlUpdateCountdown, 1000);
+    </script>
+</body>
+
+</html>

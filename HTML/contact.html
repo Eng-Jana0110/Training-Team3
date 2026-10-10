@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Our Website is about marketing ">
+    <link rel="shortcut icon" href="../assests/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/shop.css">
+    <link rel="stylesheet" href="../CSS/style2.css">
+    <link rel="stylesheet" href="../CSS/contact.css">
+    <title> Contact  - Jana - Ecom Ecom-Marketplace Template</title>
+</head>
+
+<body>
+    <!--Jana-->
+    <div id="navbar">
+    </div>
+    <div class="main-margin">
+        <!--BreadCrumb -->
+        <div class="row">
+            <div class="col-sm-12">
+                <nav class="breadcrumb" style="--bs-breadcrumb-divider:'&gt';">
+                    <ol class="breadcrumb ">
+                        <li class="breadcrumb-item">
+                            <a href="./index.html">Home</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#">Page</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            <a href="./contact.html">Contact</a>
+                        </li>
+
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        
+        <div class="cart-card">
+            <div class="top-cart d-flex justify-content-between align-items-center">
+                <h3>Shopping Cart</h3>
+                <div class="close-cart" onclick="close_cart()">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+            </div>
+
+         
+            <div class="items-in-cart">
+            <!--Java-->
+            </div>
+
+            <div class="bottom-cart">
+                <div class="total d-flex justify-content-between align-items-center">
+                    <span>Total:</span>
+                    <span id="total-price-shop" class="price-cart-total">$0.00</span>
+                </div>
+                <div class="btn-cart d-flex gap-2">
+                    <a href="./shop.html" class="btn btn-sm btn-cart-btn1 w-100 text-center text-decoration-none">View
+                        Cart</a>
+                </div>
+            </div>
+        </div>
+        <!--We Must Add It in All Pages-->
+        <div class="wishlist-card">
+            <div class="wishlist-header d-flex align-items-center justify-content-between">
+
+                <h3>My WishList</h3>
+
+                <span class="wishlist-close" onclick="close_wish()">
+                    <i class="bi bi-x-circle"></i>
+                </span>
+
+            </div>
+
+            <div class="wishlist-items">
+                <!-- Items in JS -->
+            </div>
+        </div>
+        <!--Until Here-->
+        <div class="row mt-5 ms-3">
+            <div class="col-md-6 d-flex justify-content-center align-items-start  flex-column  gap-2">
+                <h2 class="fw-bold">Contact Us</h2>
+                <span>Our team would love to hear from you!</span>
+                <form class="form ">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="First Name">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Last Name">
+                        </div>
+                        <div class="col-md-12">
+                            <input type="email" placeholder="Email" class="form-control">
+                        </div>
+
+                        <div class="col-md-12">
+                            <textarea class="form-control" rows="10" placeholder="Message"></textarea>
+                        </div>
+
+                        <div class="col-md-12">
+                            <input type="submit" class="btn btn-customize w-auto text-white">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105237.9155667025!2d8.051678616445413!3d46.811900640606304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c64ef6f596d61%3A0x5c56b5110fcb7b15!2z2LPZiNmK2LPYsdin!5e0!3m2!1sar!2ssa!4v1790699943241!5m2!1sar!2ssa"
+                    width="95%" height="100%" class="border border-2 rounded-3" allowfullscreen="" loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin">
+                </iframe>
+            </div>
+        </div>
+        <div class="row ms-3 mt-customize">
+            <div class="col-md-3 d-flex flex-column gap-4 align-items-start justify-content-top">
+                <h2 class="fw-bold">Visit Our Stores</h2>
+                <span>Find us at these locations</span>
+                <button class="btn btn-customize text-white">View Map</button>
+            </div>
+            <div class="col-md-3 d-flex flex-column gap-4">
+                <div>
+                    <h4 class="fw-bold">Melbourne</h4>
+                    <p class="font-sm">205 North Michigan Avenue, Suite 810
+                        Chicago, 60601, USA</p>
+                </div>
+                <div>
+                    <h4 class="fw-bold">San Francisco</h4>
+                    <p class="font-sm">205 North Michigan Avenue, Suite 810
+                        Chicago, 60601, USA</p>
+                </div>
+                <div>
+                    <h4 class="fw-bold">Byron Bay</h4>
+                    <p class="font-sm">205 North Michigan Avenue, Suite 810
+                        Chicago, 60601, USA</p>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex flex-column gap-4">
+                <div>
+                    <h4 class="fw-bold">Sydney</h4>
+                    <p class="font-sm">205 North Michigan Avenue, Suite 810
+                        Chicago, 60601, USA</p>
+                </div>
+                <div>
+                    <h4 class="fw-bold">Sweden</h4>
+                    <p class="font-sm">205 North Michigan Avenue, Suite 810
+                        Chicago, 60601, USA</p>
+                </div>
+                <div>
+                    <h4 class="fw-bold">Ha Noi</h4>
+                    <p class="font-sm">205 North Michigan Avenue, Suite 810
+                        Chicago, 60601, USA</p>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex flex-column gap-4">
+                <div>
+                    <h4 class="fw-bold">Bangkok</h4>
+                    <p class="font-sm">205 North Michigan Avenue, Suite 810
+                        Chicago, 60601, USA</p>
+                </div>
+                <div>
+                    <h4 class="fw-bold">Seoul</h4>
+                    <p class="font-sm">205 North Michigan Avenue, Suite 810
+                        Chicago, 60601, USA</p>
+                </div>
+                <div>
+                    <h4 class="fw-bold">Paris</h4>
+                    <p class="font-sm">205 North Michigan Avenue, Suite 810
+                        Chicago, 60601, USA</p>
+                </div>
+            </div>
+        </div>
+        <div class="box bg-customize mt-customize">
+            <div class="container">
+                <div class="row ms-3  ">
+                    <div class="col-md-3 d-flex flex-column align-items-start">
+                        <h3 class="h3-customize">We‘d love to here from you</h3>
+                        <p>Chat with our friendly team</p>
+                    </div>
+                    <div class="col-md-3 text-center chat">
+                        <i class="bi bi-chat-left-text"></i>
+                        <h4 class="fw-bold">Chat to sales</h4>
+                        <p>Speak to our team</p>
+                        <a href="mailto:sales@ecom.com" >sales@ecom.com</a>
+                    </div>
+                    <div class="col-md-3 text-center chat">
+                        <i class="bi bi-telephone-fill"></i>
+                        <h4 class="fw-bold">Call Us</h4>
+                        <p>Mon-Fri from 8am to 5pm</p>
+                        <a href="tel:+1(555)000-0000" >+1(555)000-0000</a>
+                    </div>
+                    <div class="col-md-3 text-center chat">
+                        <i class="bi bi-map"></i>
+                        <h4 class="fw-bold">Visit Us</h4>
+                        <p class="font-sm">Visit our office</p>
+                        <span class="font-sm">
+                            205 North Michigan Avenue, Suite 810
+                            <br>
+                            Chicago, 60601, USA
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+
+            <div class="footer-column">
+
+                <a href="index.html" class="footer-logo">
+                    E<span>com</span>
+                </a>
+
+                <h3>Contact</h3>
+
+                <p>
+                    Address: 502 New Design Str, Melbourne,
+                    San Francisco, CA 94110, United States
+                </p>
+
+                <p>
+                    Phone: (+01) 123-456-789
+                </p>
+
+                <p>
+                    E-mail: support@ecom.com
+                </p>
+
+                <p>
+                    Hours: 8:00 - 17:00, Mon - Sat
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Make Money with Us</h3>
+
+                <a href="pages/about.html">
+                    Mission & Vision
+                </a>
+
+                <a href="pages/about.html">
+                    Our Team
+                </a>
+
+                <a href="pages/careers.html">
+                    Careers
+                </a>
+
+                <a href="#">
+                    Press & Media
+                </a>
+
+                <a href="#">
+                    Advertising
+                </a>
+
+                <a href="#">
+                    Testimonials
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Company</h3>
+
+                <a href="blog/index.html">
+                    Our Blog
+                </a>
+
+                <a href="#">
+                    Plans & Pricing
+                </a>
+
+                <a href="#">
+                    Knowledge Base
+                </a>
+
+                <a href="#">
+                    Cookie Policy
+                </a>
+
+                <a href="#">
+                    Office Center
+                </a>
+
+                <a href="blog/index.html">
+                    News & Events
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>My Account</h3>
+
+                <a href="dashboard/index.html">
+                    FAQs
+                </a>
+
+                <a href="dashboard/index.html">
+                    Editor Help
+                </a>
+
+                <a href="dashboard/index.html">
+                    Community
+                </a>
+
+                <a href="#">
+                    Live Chatting
+                </a>
+
+                <a href="contact/index.html">
+                    Contact Us
+                </a>
+
+                <a href="#">
+                    Support Center
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>App & Payment</h3>
+
+                <p>
+                    Download our Apps and get extra 15%
+                    Discount on your first Order!
+                </p>
+
+                <div class="app-buttons">
+
+                    <button>
+                        ▶ Google Play
+                    </button>
+
+                    <button>
+                         App Store
+                    </button>
+
+                </div>
+
+                <h4>
+                    Secured Payment Gateways
+                </h4>
+
+                <div class="payment-icons">
+                    💳 💳 💳 💳
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-brands">
+
+            <div class="container">
+
+                <strong>Electronic:</strong>
+
+                <span>Cell Phones</span>
+                <span>Headphones</span>
+                <span>Television & Video</span>
+                <span>Game Controller</span>
+                <span>Apple Watch</span>
+                <span>iPad</span>
+                <span>Keyboard</span>
+                <span>Samsung</span>
+                <span>Wireless Speaker</span>
+                <span>Gaming Mouse</span>
+
+            </div>
+
+
+            <div class="container">
+
+                <strong>Furniture:</strong>
+
+                <span>Sofa</span>
+                <span>Chair</span>
+                <span>Dining Table</span>
+                <span>Living Room</span>
+                <span>Table Lamp</span>
+                <span>Computer Desk</span>
+                <span>Night Stand</span>
+                <span>Kitchen</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+            Copyright © 2022 Ecom Market. All rights reserved.
+        </div>
+
+    </footer>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="../JavaScript/main.js"></script>
+      <script src="../JavaScript/shop.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

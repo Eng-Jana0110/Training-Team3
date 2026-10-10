@@ -1,0 +1,842 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>careers</title>
+
+    <!-- Google Fonts & FontAwesome -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/shop.css">
+    <link rel="stylesheet" href="../CSS/style2.css">
+    <link rel="stylesheet" href="../CSS/pages.css">
+  </head>
+  <body>
+    <!-- هنا تضع جنى sidebar-->
+     <div id="navbar">
+  </div>
+
+    <!-- Top Bar -->
+    <div class="top-bar bg-white main-margin">
+      <!--BreadCrumb -->
+    <div class="row">
+      <div class="col-sm-12">
+        <nav class="breadcrumb" style="--bs-breadcrumb-divider:'&gt';">
+          <ol class="breadcrumb ">
+            <li class="breadcrumb-item">
+              <a href="./index.html">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="#">Page</a>
+            </li>
+            <li class="breadcrumb-item ">
+              <a href="./Careers.html">Careers</a>
+            </li>
+
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="cart-card">
+      <div class="top-cart d-flex justify-content-between align-items-center">
+        <h3>Shopping Cart</h3>
+        <div class="close-cart" onclick="close_cart()">
+          <i class="bi bi-x-lg"></i>
+        </div>
+      </div>
+
+
+      <div class="items-in-cart">
+        <!--Java-->
+      </div>
+
+      <div class="bottom-cart">
+        <div class="total d-flex justify-content-between align-items-center">
+          <span>Total:</span>
+          <span id="total-price-shop" class="price-cart-total">$0.00</span>
+        </div>
+        <div class="btn-cart d-flex gap-2">
+          <a href="../HTML/shop.html" class="btn btn-sm btn-cart-btn1 w-100 text-center text-decoration-none">View
+            Cart</a>
+        </div>
+      </div>
+    </div>
+    <!--We Must Add It in All Pages-->
+    <div class="wishlist-card">
+      <div class="wishlist-header d-flex align-items-center justify-content-between">
+
+        <h3>My WishList</h3>
+
+        <span class="wishlist-close" onclick="close_wish()">
+          <i class="bi bi-x-circle"></i>
+        </span>
+
+      </div>
+
+      <div class="wishlist-items">
+        <!-- Items in JS -->
+      </div>
+    </div>
+    <!--Until Here-->
+
+      <!--
+      <div
+        class="container d-flex justify-content-between align-items-center"
+      >
+        <div class="d-flex gap-2 align-items-center text-secondary small">
+          <a href="#" class="text-decoration-none text-secondary hover-orange"
+            >About Us</a
+          >
+          <span>|</span>
+          <a href="#" class="text-decoration-none text-secondary hover-orange"
+            >Careers</a
+          >
+          <span>|</span>
+          <a href="#" class="text-decoration-none text-secondary hover-orange"
+            >Open a shop</a
+          >
+        </div>
+        <div>
+          Free shipping for all orders over
+          <strong style="color: #16a34a">$75.00</strong>
+        </div>
+        <div class="d-flex gap-3 align-items-center">
+          <div>
+            Need help? Call Us:
+            <strong style="color: #25eb8f">+ 1800 900</strong>
+          </div>
+          
+   
+    <div class="dropdown" style="z-index: 2000;">
+
+        <button
+            class="btn btn-light bg-white border-0 dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+        >
+            <img
+                src="https://flagcdn.com/w20/gb.png"
+                width="20"
+                alt="UK"
+            >
+            <span id="language">English</span>
+        </button>
+
+        <ul class="dropdown-menu shadow-sm border-0 rounded-0">
+
+            <li>
+                <button class="dropdown-item" onclick="changeLanguage('English', 'gb')">
+                    <img src="https://flagcdn.com/w20/gb.png" width="20" alt="UK">
+                    English
+                </button>
+            </li>
+
+            <li>
+                <button class="dropdown-item" onclick="changeLanguage('Français', 'fr')">
+                    <img src="https://flagcdn.com/w20/fr.png" width="20" alt="France">
+                    Français
+                </button>
+            </li>
+
+            <li>
+                <button class="dropdown-item" onclick="changeLanguage('Español', 'es')">
+                    <img src="https://flagcdn.com/w20/es.png" width="20" alt="Spain">
+                    Español
+                </button>
+            </li>
+
+            <li>
+                <button class="dropdown-item" onclick="changeLanguage('Português', 'pt')">
+                    <img src="https://flagcdn.com/w20/pt.png" width="20" alt="Portugal">
+                    Português
+                </button>
+            </li>
+
+            <li>
+                <button class="dropdown-item" onclick="changeLanguage('中国人', 'cn')">
+                    <img src="https://flagcdn.com/w20/cn.png" width="20" alt="China">
+                    中国人
+                </button>
+            </li>
+
+        </ul>
+
+    </div>
+
+
+
+    <div class="dropdown" style="z-index: 2000;">
+
+        <button
+            class="btn btn-light bg-white border-0 dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+        >
+            <span id="currency">USD</span>
+        </button>
+
+        <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 rounded-0">
+
+            <li>
+                <button class="dropdown-item active" onclick="changeCurrency('USD', this)">
+                    USD
+                </button>
+            </li>
+
+            <li>
+                <button class="dropdown-item" onclick="changeCurrency('EUR', this)">
+                    EUR
+                </button>
+            </li>
+
+            <li>
+                <button class="dropdown-item" onclick="changeCurrency('AUD', this)">
+                    AUD
+                </button>
+            </li>
+
+            <li>
+                <button class="dropdown-item" onclick="changeCurrency('SGP', this)">
+                    SGP
+                </button>
+            </li>
+
+        </ul>
+
+    </div>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg sticky-top bg-white border-bottom py-2">
+      <div
+        class="container-fluid px-3 px-md-4 d-flex align-items-center justify-content-between"
+      >
+      
+        <a class="navbar-brand me-2 me-xl-3 flex-shrink-0" href="#">
+          <img src="./logo.png.svg" alt="Ecom" width="130" />
+        </a>
+
+   
+        <form
+          class="d-none d-lg-flex align-items-center flex-grow-1 mx-3"
+          role="search"
+          style="max-width: 380px"
+        >
+          <div class="input-group border rounded overflow-hidden w-100">
+            <select
+              class="form-select border-0 bg-light text-secondary small w-auto"
+              style="max-width: 130px; cursor: pointer"
+            >
+              <option>All categories</option>
+              <option>Electronics</option>
+              <option>Furniture</option>
+            </select>
+            <input
+              class="form-control border-0 small shadow-none"
+              type="search"
+              placeholder="Search for items..."
+            />
+          </div>
+        </form>
+
+      
+        <div
+          class="offcanvas-lg offcanvas-end mx-auto"
+          tabindex="-1"
+          id="mainNavbarOffcanvas"
+          aria-labelledby="mainNavbarOffcanvasLabel"
+        >
+  
+          <div class="offcanvas-header border-bottom py-3">
+            <a href="#">
+              <img src="./logo.png.svg" alt="Ecom" width="120" />
+            </a>
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+              data-bs-target="#mainNavbarOffcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+
+       
+          <div
+            class="offcanvas-body d-flex flex-column justify-content-between p-3 p-lg-0"
+          >
+      
+            <ul class="navbar-nav d-flex flex-column flex-lg-row flex-lg-wrap gap-2 gap-lg-3 fw-semibold small text-nowrap mt-lg-3">
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark p-0" href="#" data-bs-toggle="dropdown">Home</a>
+            <ul class="dropdown-menu border-0 shadow-sm ps-3 ps-lg-0 mt-2">
+              <li><a class="dropdown-item" href="home1.html">Home 1</a></li>
+              <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
+              <li><a class="dropdown-item" href="home3.html">Home 3 </a></li>
+              <li><a class="dropdown-item" href="home4.html">Home 4</a></li>
+              <li><a class="dropdown-item" href="home5.html">Home 5</a></li>
+              <li><a class="dropdown-item" href="home6.html">Home 6</a></li>
+              <li><a class="dropdown-item" href="home7.html">Home 7</a></li>
+              <li><a class="dropdown-item" href="home8.html">Home 8</a></li>
+              <li><a class="dropdown-item" href="home9.html">Home 9</a></li>
+              <li><a class="dropdown-item" href="home10.html">Home 10</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark p-0" href="#" data-bs-toggle="dropdown">Shop</a>
+            <ul class="dropdown-menu border-0 shadow-sm ps-3 ps-lg-0 mt-2">
+              <li><a class="dropdown-item" href="shopGrid.html">Shop Grid</a></li>
+              <li><a class="dropdown-item" href="shopList">Shop List</a></li>
+              <li><a class="dropdown-item" href="shopList-left.html">Shop list-Left sidebar</a></li>
+              <li><a class="dropdown-item" href="shoplist-Right.html">Shop list-Right sidebar</a></li>
+              <li><a class="dropdown-item" href="shopiFullwdth.html">Shop iFullwdth</a></li>
+              <li><a class="dropdown-item" href="singleProduct.html">Single Product</a></li>
+              <li><a class="dropdown-item" href="singleProduct2.html">Single Product 2</a></li>
+              <li><a class="dropdown-item" href=singleProduct3.html"">Single Product 3</a></li>
+              <li><a class="dropdown-item" href="singleProduct4.html">Single Product 4</a></li>
+              <li><a class="dropdown-item" href="shopCart.html">Shop Cart</a></li>
+              <li><a class="dropdown-item" href="shopCheckout.html">Shop Checkout></a></li>
+              <li><a class="dropdown-item" href="shopCompar.html">Shop Compare</a></li>
+              <li><a class="dropdown-item" href="shopWishlist.html">Shop Wishlist</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark p-0" href="#" data-bs-toggle="dropdown">Vendors</a>
+            <ul class="dropdown-menu border-0 shadow-sm ps-3 ps-lg-0 mt-2">
+              <li><a class="dropdown-item" href="vendor-listing.html">Vendor Listing</a></li>
+              <li><a class="dropdown-item" href="vendor-single.html">Vendor Single</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark p-0" href="#" data-bs-toggle="dropdown">Pages</a>
+            <ul class="dropdown-menu border-0 shadow-sm ps-3 ps-lg-0 mt-2">
+              <li><a class="dropdown-item" href="about.html">About Us</a></li>
+              <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+              <li><a class="dropdown-item" href="careers.html">Careers</a></li>
+              <li><a class="dropdown-item" href="terms.html">Term and Condition</a></li>
+              <li><a class="dropdown-item" href="register.html">Register</a></li>
+              <li><a class="dropdown-item" href="login.html">Login</a></li>
+              <li><a class="dropdown-item" href="404.html">Error 404</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark p-0" href="#" data-bs-toggle="dropdown">Blog</a>
+            <ul class="dropdown-menu border-0 shadow-sm ps-3 ps-lg-0 mt-2">
+              <li><a class="dropdown-item" href="blog_noSidebar.html">Blog No Sidebar</a></li>
+              <li><a class="dropdown-item" href="blogRight.html">Blog Right Sidebar</a></li>
+              <li><a class="dropdown-item" href="blogList.html">Blog List</a></li>
+              <li><a class="dropdown-item" href="blogCategory.html">Blog category big</a></li>
+              <li><a class="dropdown-item" href="blogSingle-left.html">Blog Singl-Left sidebar</a></li>
+              <li><a class="dropdown-item" href="blogSingle-right.html">Blog Single-Right sidebar</a></li>
+              <li><a class="dropdown-item" href="blogSinglr-noSidebar.html">Blog Single-NO sidebar</a></li>
+            </ul>
+          </li>
+
+          
+          <li class="w-100 d-none d-lg-block m-0 p-0"></li>
+
+          <li class="nav-item mt-lg-1">
+            <a class="nav-link text-dark p-0" href="contact-us.html">Contact Us</a>
+          </li>
+        </ul>
+
+            <div class="border-top pt-3 mt-4 d-lg-none">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <img
+                  src="./image pages/ava_1.png"
+                  alt="Steven"
+                  class="rounded-circle"
+                  style="width: 45px; height: 45px; object-fit: cover"
+                />
+                <div>
+                  <h6 class="fw-bold mb-0 text-dark">Hello Steven !</h6>
+                  <small class="text-muted" style="font-size: 12px"
+                    >You have 3 new messages</small
+                  >
+                </div>
+              </div>
+
+              <div class="row g-2 text-secondary small fw-semibold">
+                <div class="col-6">
+                  <a
+                    href="#"
+                    class="text-secondary text-decoration-none hover-orange d-block py-1"
+                    >My Account</a
+                  >
+                </div>
+                <div class="col-6">
+                  <a
+                    href="#"
+                    class="text-secondary text-decoration-none hover-orange d-block py-1"
+                    >My Wishlist</a
+                  >
+                </div>
+                <div class="col-6">
+                  <a
+                    href="#"
+                    class="text-secondary text-decoration-none hover-orange d-block py-1"
+                    >Order Tracking</a
+                  >
+                </div>
+                <div class="col-6">
+                  <a
+                    href="#"
+                    class="text-secondary text-decoration-none hover-orange d-block py-1"
+                    >Setting</a
+                  >
+                </div>
+                <div class="col-6">
+                  <a
+                    href="#"
+                    class="text-secondary text-decoration-none hover-orange d-block py-1"
+                    >My Orders</a
+                  >
+                </div>
+                <div class="col-6">
+                  <a
+                    href="#"
+                    class="text-secondary text-decoration-none hover-orange d-block py-1"
+                    >Sign Out</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="d-flex align-items-center gap-2 gap-sm-3 ms-auto flex-shrink-0"
+        >
+          <a href="login.html" class="header-action-icon" title="Account">
+            <i class="bi bi-person fs-5"></i>
+          </a>
+
+          <a
+            href="#"
+            class="header-action-icon position-relative"
+            title="Wishlist"
+          >
+            <i class="bi bi-heart fs-5"></i>
+            <span class="badge-orange">5</span>
+          </a>
+
+          <button
+            class="header-action-icon position-relative border-0 bg-transparent p-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasCart"
+            title="Cart"
+          >
+            <i class="bi bi-cart3 fs-5"></i>
+            <span class="badge-orange">2</span>
+          </button>
+
+          <a
+            href="#"
+            class="header-action-icon d-none d-sm-inline-flex"
+            title="Compare"
+          >
+            <i class="bi bi-arrow-repeat fs-5"></i>
+          </a>
+
+         
+          <button
+            class="btn border-0 p-0 text-dark ms-1 d-lg-none"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mainNavbarOffcanvas"
+          >
+            <i class="bi bi-list fs-2"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+   
+    <div class="bg-light py-2 border-bottom mb-5">
+      <div class="container px-4">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0 small text-muted">
+            <li class="breadcrumb-item">
+              <a href="index.html" class="text-decoration-none text-muted hover-info">home</a> 
+            <li class="breadcrumb-item">
+              <a href="#" class="text-decoration-none text-muted hover-info" >Pages</a>
+            </li>
+            <li class="breadcrumb-item active fw-medium hover-info" aria-current="page">
+              Careers
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    -->
+    <!-- 1. Hero Section -->
+    <section class="section-box mt-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-10 mx-auto">
+              <h2 class="text-center mb-2">Work with us</h2><img class="mb-3" src="../assests/Feras/team-2.jpg" width="850px" alt="Team">
+              <p>We recognize that poverty has no borders. Neither does excellence. We are continually in search of the brightest, most talented individuals from around the globe.</p>
+              <h5>Programs and Internships</h5>
+              <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.</p>
+              <p>To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure? On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.</p>
+              <h5>Current Openings</h5>
+              <p>These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.</p>
+              <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.</p>
+              <p>To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure? On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.</p>
+              <h5>Behind the Mission</h5>
+              <p>These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.</p>
+              <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.</p>
+              <p>To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure? On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+   <div class="container my-5">
+      <!-- الحاوية المرنة الرئيسية للخمس بطاقات -->
+      <div class="features-wrapper">
+        <!-- 1. Free Delivery -->
+        <div class="feature-item">
+          <i class="bi bi-airplane feature-icon"></i>
+          <div>
+            <h6 class="feature-title">Free Delivery</h6>
+            <p class="feature-text">From all orders over $10</p>
+          </div>
+        </div>
+
+        <!-- 2. Support 24/7 -->
+        <div class="feature-item">
+          <i class="bi bi-headset feature-icon"></i>
+          <div>
+            <h6 class="feature-title">Support 24/7</h6>
+            <p class="feature-text">Shop with an expert</p>
+          </div>
+        </div>
+
+        <!-- 3. Gift voucher -->
+        <div class="feature-item">
+          <i class="bi bi-gift feature-icon"></i>
+          <div>
+            <h6 class="feature-title">Gift voucher</h6>
+            <p class="feature-text">Refer a friend</p>
+          </div>
+        </div>
+
+        <!-- 4. Return & Refund -->
+        <div class="feature-item">
+          <i class="bi bi-arrow-counterclockwise feature-icon"></i>
+          <div>
+            <h6 class="feature-title">Return & Refund</h6>
+            <p class="feature-text">Free return over $200</p>
+          </div>
+        </div>
+
+        <!-- 5. Secure payment -->
+        <div class="feature-item">
+          <i class="bi bi-shield-check feature-icon"></i>
+          <div>
+            <h6 class="feature-title">Secure payment</h6>
+            <p class="feature-text">100% Protected</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Subscribe Banner Section -->
+    <section class="container-fluid px-3 px-md-4 my-5">
+      <div
+        class="rounded-4 px-4 px-lg-5 py-4 text-white overflow-hidden d-flex align-items-center"
+        style="background-color: #0c1e3d; min-height: 220px"
+      >
+        <div class="row align-items-center w-100 m-0 g-3">
+          <!-- 1. النص والعنوان (5 أعمدة) -->
+          <div class="col-12 col-lg-5 text-center text-lg-start">
+            <h2 class="fw-bold fs-2 mb-1">
+              Subscribe & Get <span style="color: #f97316">10%</span> Discount
+            </h2>
+            <p class="text-white-50 small mb-0">
+              Get E-mail updates about our latest shop and
+              <strong class="text-white">special offers.</strong>
+            </p>
+          </div>
+
+          <!-- 2. حقل البريد والزر (4 أعمدة) -->
+          <div class="col-12 col-lg-4">
+            <form onsubmit="event.preventDefault()">
+              <div class="input-group">
+                <input
+                  type="email"
+                  class="form-control border-0 py-2 px-3 small"
+                  placeholder="Your email Address"
+                  required
+                  style="
+                    border-top-left-radius: 6px;
+                    border-bottom-left-radius: 6px;
+                  "
+                />
+                <button
+                  class="btn text-white fw-bold px-4 small"
+                  type="submit"
+                  style="
+                    background-color: #f97316;
+                    border-top-right-radius: 6px;
+                    border-bottom-right-radius: 6px;
+                    border: none;
+                  "
+                >
+                  Sign Up
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- 3. صورة الأجهزة (3 أعمدة) -->
+          <div class="col-12 col-lg-3 text-center text-lg-end">
+            <img
+              src="../assests/Feras/tab.png"
+              alt="Devices Mockup"
+              class="img-fluid d-inline-block mt-5"
+              style="max-height: 170px; object-fit: contain"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+    <!-- FOOTER -->
+    <footer class="footer mt-50">
+
+        <div class="container footer-grid">
+
+
+            <div class="footer-column">
+
+                <a href="index.html" class="footer-logo">
+                    E<span>com</span>
+                </a>
+
+                <h3>Contact</h3>
+
+                <p>
+                    Address: 502 New Design Str, Melbourne,
+                    San Francisco, CA 94110, United States
+                </p>
+
+                <p>
+                    Phone: (+01) 123-456-789
+                </p>
+
+                <p>
+                    E-mail: support@ecom.com
+                </p>
+
+                <p>
+                    Hours: 8:00 - 17:00, Mon - Sat
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Make Money with Us</h3>
+
+                <a href="pages/about.html">
+                    Mission & Vision
+                </a>
+
+                <a href="pages/about.html">
+                    Our Team
+                </a>
+
+                <a href="pages/careers.html">
+                    Careers
+                </a>
+
+                <a href="#">
+                    Press & Media
+                </a>
+
+                <a href="#">
+                    Advertising
+                </a>
+
+                <a href="#">
+                    Testimonials
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Company</h3>
+
+                <a href="blog/index.html">
+                    Our Blog
+                </a>
+
+                <a href="#">
+                    Plans & Pricing
+                </a>
+
+                <a href="#">
+                    Knowledge Base
+                </a>
+
+                <a href="#">
+                    Cookie Policy
+                </a>
+
+                <a href="#">
+                    Office Center
+                </a>
+
+                <a href="blog/index.html">
+                    News & Events
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>My Account</h3>
+
+                <a href="dashboard/index.html">
+                    FAQs
+                </a>
+
+                <a href="dashboard/index.html">
+                    Editor Help
+                </a>
+
+                <a href="dashboard/index.html">
+                    Community
+                </a>
+
+                <a href="#">
+                    Live Chatting
+                </a>
+
+                <a href="contact/index.html">
+                    Contact Us
+                </a>
+
+                <a href="#">
+                    Support Center
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>App & Payment</h3>
+
+                <p>
+                    Download our Apps and get extra 15%
+                    Discount on your first Order!
+                </p>
+
+                <div class="app-buttons">
+
+                    <button>
+                        ▶ Google Play
+                    </button>
+
+                    <button>
+                         App Store
+                    </button>
+
+                </div>
+
+                <h4>
+                    Secured Payment Gateways
+                </h4>
+
+                <div class="payment-icons">
+                    💳 💳 💳 💳
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-brands">
+
+            <div class="container">
+
+                <strong>Electronic:</strong>
+
+                <span>Cell Phones</span>
+                <span>Headphones</span>
+                <span>Television & Video</span>
+                <span>Game Controller</span>
+                <span>Apple Watch</span>
+                <span>iPad</span>
+                <span>Keyboard</span>
+                <span>Samsung</span>
+                <span>Wireless Speaker</span>
+                <span>Gaming Mouse</span>
+
+            </div>
+
+
+            <div class="container">
+
+                <strong>Furniture:</strong>
+
+                <span>Sofa</span>
+                <span>Chair</span>
+                <span>Dining Table</span>
+                <span>Living Room</span>
+                <span>Table Lamp</span>
+                <span>Computer Desk</span>
+                <span>Night Stand</span>
+                <span>Kitchen</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+            Copyright © 2022 Ecom Market. All rights reserved.
+        </div>
+
+    </footer>
+    
+    <div id="toast"></div>
+  <a href="#" class="scroll-top-btn"><i class="fa-solid fa-arrow-up"></i></a>
+   <script src="../JavaScript/main.js"></script>
+    <script src="../JavaScript/shop.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JavaScript/pages.js"></script>
+  </body>
+</html>

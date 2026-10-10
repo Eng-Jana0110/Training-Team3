@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Single Vendor | Ecom</title>
+
+    <link rel="shortcut icon" href="../assests/favicon.svg" type="image/x-icon">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/shop.css">
+        <link rel="stylesheet" href="../CSS/style2.css">
+    <link rel="stylesheet" href="../CSS/SingleVendor.css">
+</head>
+
+<body>
+
+    <!-- Shared Navbar -->
+    <div id="navbar"></div>
+     
+
+    <main class="single-vendor-page  main-margin">
+ <!--BreadCrumb -->
+        <div class="row">
+            <div class="col-sm-12">
+                <nav class="breadcrumb" style="--bs-breadcrumb-divider:'&gt';">
+                    <ol class="breadcrumb ">
+                        <li class="breadcrumb-item">
+                            <a href="./index.html">Home</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#">Vendor</a>
+                        </li>
+                        <li class="breadcrumb-item ">
+                            <a href="./contact.html">vendor-single</a>
+                        </li>
+        
+
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <div class="cart-card">
+            <div class="top-cart d-flex justify-content-between align-items-center">
+                <h3>Shopping Cart</h3>
+                <div class="close-cart" onclick="close_cart()">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+            </div>
+
+
+            <div class="items-in-cart">
+                <!--Java-->
+            </div>
+
+            <div class="bottom-cart">
+                <div class="total d-flex justify-content-between align-items-center">
+                    <span>Total:</span>
+                    <span id="total-price-shop" class="price-cart-total">$0.00</span>
+                </div>
+                <div class="btn-cart d-flex gap-2">
+                    <a href="../HTML/shop.html"
+                        class="btn btn-sm btn-cart-btn1 w-100 text-center text-decoration-none">View
+                        Cart</a>
+                </div>
+            </div>
+        </div>
+        <!--We Must Add It in All Pages-->
+        <div class="wishlist-card">
+            <div class="wishlist-header d-flex align-items-center justify-content-between">
+
+                <h3>My WishList</h3>
+
+                <span class="wishlist-close" onclick="close_wish()">
+                    <i class="bi bi-x-circle"></i>
+                </span>
+
+            </div>
+
+            <div class="wishlist-items">
+                <!-- Items in JS -->
+            </div>
+        </div>
+        <!--Until Here-->
+
+       
+        <!-- Vendor Cover -->
+        <section class="sv-cover">
+            <div class="sv-cover-content">
+                <span class="sv-badge">
+                    <i class="bi bi-patch-check-fill"></i>
+                    VERIFIED STORE
+                </span>
+
+                <h1 id="sv-cover-name">Urban Threads</h1>
+
+                <p id="sv-cover-description">
+                    Discover modern styles, clothing, and everyday essentials.
+                </p>
+
+                <div class="sv-cover-meta">
+                    <span>
+                        <i class="bi bi-star-fill"></i>
+                        <strong id="sv-cover-rating">4.9</strong> Rating
+                    </span>
+
+                    <span>
+                        <i class="bi bi-box-seam"></i>
+                        <strong id="sv-cover-products">128</strong> Products
+                    </span>
+
+                    <span>
+                        <i class="bi bi-globe"></i>
+                        Online Store
+                    </span>
+                </div>
+            </div>
+
+            <div class="sv-cover-logo">
+                <i class="bi bi-bag-heart-fill"></i>
+            </div>
+        </section>
+
+        <!-- Vendor Profile -->
+        <section class="sv-profile-bar">
+
+            <div class="sv-profile-brand">
+                <div class="sv-brand-avatar">
+                    <i class="bi bi-shop"></i>
+                </div>
+
+                <div>
+                    <span class="sv-label">STORE PROFILE</span>
+                    <h2 id="sv-profile-name">Urban Threads</h2>
+                    <p id="sv-profile-category">Fashion & Clothing</p>
+                </div>
+            </div>
+
+            <div class="sv-profile-actions">
+                <button type="button" id="sv-follow-btn" class="sv-outline-btn">
+                    <i class="bi bi-heart"></i>
+                    <span>Follow Store</span>
+                </button>
+
+                <a href="./Contact.html" class="sv-primary-btn">
+                    <i class="bi bi-chat-dots"></i>
+                    Contact Store
+                </a>
+            </div>
+
+        </section>
+
+        <!-- About and Store Information -->
+        <section class="sv-about-grid">
+
+            <article class="sv-about-card">
+                <span class="sv-label">ABOUT THE STORE</span>
+
+                <h2>
+                    Welcome to
+                    <span id="sv-about-name">Urban Threads</span>
+                </h2>
+
+                <p id="sv-about-text">
+                    Urban Threads offers modern clothing and versatile
+                    everyday essentials. The store focuses on comfortable
+                    styles and practical products for different occasions.
+                </p>
+
+                <div class="sv-feature-list">
+                    <div>
+                        <i class="bi bi-check-circle-fill"></i>
+                        Curated Product Selection
+                    </div>
+
+                    <div>
+                        <i class="bi bi-check-circle-fill"></i>
+                        Easy Online Shopping
+                    </div>
+
+                    <div>
+                        <i class="bi bi-check-circle-fill"></i>
+                        Modern Styles
+                    </div>
+
+                    <div>
+                        <i class="bi bi-check-circle-fill"></i>
+                        Convenient Browsing
+                    </div>
+                </div>
+            </article>
+
+            <aside class="sv-info-card">
+                <h3>Store Information</h3>
+
+                <div class="sv-info-row">
+                    <span><i class="bi bi-grid"></i> Category</span>
+                    <strong id="sv-info-category">Fashion & Clothing</strong>
+                </div>
+
+                <div class="sv-info-row">
+                    <span><i class="bi bi-box-seam"></i> Products</span>
+                    <strong id="sv-info-products">128</strong>
+                </div>
+
+                <div class="sv-info-row">
+                    <span><i class="bi bi-star"></i> Rating</span>
+                    <strong class="sv-rating">
+                        <i class="bi bi-star-fill"></i>
+                        <span id="sv-info-rating">4.9</span> / 5
+                    </strong>
+                </div>
+
+                <div class="sv-info-row">
+                    <span><i class="bi bi-patch-check"></i> Status</span>
+                    <strong class="sv-status">Verified</strong>
+                </div>
+
+                <div class="sv-info-row">
+                    <span><i class="bi bi-clock"></i> Store Hours</span>
+                    <strong>Online 24/7</strong>
+                </div>
+            </aside>
+
+        </section>
+
+        <!-- Vendor Products -->
+        <section class="sv-products-section">
+
+            <div class="sv-section-heading">
+                <div>
+                    <span class="sv-label">SHOP THIS STORE</span>
+                    <h2>Products from this Vendor</h2>
+                    <p>Explore products available from this store.</p>
+                </div>
+
+                <a href="./shop.html" class="sv-view-all">
+                    View All Products
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="sv-product-toolbar">
+
+                <label class="sv-product-search">
+                    <i class="bi bi-search"></i>
+
+                    <input
+                        type="search"
+                        id="sv-product-search"
+                        placeholder="Search this store..."
+                        aria-label="Search products">
+                </label>
+
+                <select id="sv-product-sort"
+                        class="form-select"
+                        aria-label="Sort products">
+
+                    <option value="featured">Featured Products</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="name">Name: A to Z</option>
+
+                </select>
+
+            </div>
+
+            <div id="sv-product-grid" class="sv-product-grid"></div>
+
+            <div id="sv-no-products" class="sv-no-products d-none">
+                <i class="bi bi-search"></i>
+                <h3>No Products Found</h3>
+                <p>Try another search term.</p>
+            </div>
+
+        </section>
+
+        <!-- Contact Section -->
+        <section class="sv-contact-strip">
+            <div class="sv-contact-icon">
+                <i class="bi bi-chat-square-heart"></i>
+            </div>
+
+            <div>
+                <h3>Have a question about this store?</h3>
+                <p>Contact the store for help with products and availability.</p>
+            </div>
+
+            <a href="./Contact.html" class="sv-primary-btn">
+                Get in Touch
+                <i class="bi bi-arrow-right"></i>
+            </a>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+
+            <div class="footer-column">
+
+                <a href="index.html" class="footer-logo">
+                    E<span>com</span>
+                </a>
+
+                <h3>Contact</h3>
+
+                <p>
+                    Address: 502 New Design Str, Melbourne,
+                    San Francisco, CA 94110, United States
+                </p>
+
+                <p>
+                    Phone: (+01) 123-456-789
+                </p>
+
+                <p>
+                    E-mail: support@ecom.com
+                </p>
+
+                <p>
+                    Hours: 8:00 - 17:00, Mon - Sat
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Make Money with Us</h3>
+
+                <a href="pages/about.html">
+                    Mission & Vision
+                </a>
+
+                <a href="pages/about.html">
+                    Our Team
+                </a>
+
+                <a href="pages/careers.html">
+                    Careers
+                </a>
+
+                <a href="#">
+                    Press & Media
+                </a>
+
+                <a href="#">
+                    Advertising
+                </a>
+
+                <a href="#">
+                    Testimonials
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Company</h3>
+
+                <a href="blog/index.html">
+                    Our Blog
+                </a>
+
+                <a href="#">
+                    Plans & Pricing
+                </a>
+
+                <a href="#">
+                    Knowledge Base
+                </a>
+
+                <a href="#">
+                    Cookie Policy
+                </a>
+
+                <a href="#">
+                    Office Center
+                </a>
+
+                <a href="blog/index.html">
+                    News & Events
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>My Account</h3>
+
+                <a href="dashboard/index.html">
+                    FAQs
+                </a>
+
+                <a href="dashboard/index.html">
+                    Editor Help
+                </a>
+
+                <a href="dashboard/index.html">
+                    Community
+                </a>
+
+                <a href="#">
+                    Live Chatting
+                </a>
+
+                <a href="contact/index.html">
+                    Contact Us
+                </a>
+
+                <a href="#">
+                    Support Center
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>App & Payment</h3>
+
+                <p>
+                    Download our Apps and get extra 15%
+                    Discount on your first Order!
+                </p>
+
+                <div class="app-buttons">
+
+                    <button>
+                        ▶ Google Play
+                    </button>
+
+                    <button>
+                         App Store
+                    </button>
+
+                </div>
+
+                <h4>
+                    Secured Payment Gateways
+                </h4>
+
+                <div class="payment-icons">
+                    💳 💳 💳 💳
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-brands">
+
+            <div class="container">
+
+                <strong>Electronic:</strong>
+
+                <span>Cell Phones</span>
+                <span>Headphones</span>
+                <span>Television & Video</span>
+                <span>Game Controller</span>
+                <span>Apple Watch</span>
+                <span>iPad</span>
+                <span>Keyboard</span>
+                <span>Samsung</span>
+                <span>Wireless Speaker</span>
+                <span>Gaming Mouse</span>
+
+            </div>
+
+
+            <div class="container">
+
+                <strong>Furniture:</strong>
+
+                <span>Sofa</span>
+                <span>Chair</span>
+                <span>Dining Table</span>
+                <span>Living Room</span>
+                <span>Table Lamp</span>
+                <span>Computer Desk</span>
+                <span>Night Stand</span>
+                <span>Kitchen</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+            Copyright © 2022 Ecom Market. All rights reserved.
+        </div>
+
+    </footer>
+    
+    <div id="toast"></div>
+
+    <!-- Shared JavaScript -->
+    <script src="../JavaScript/main.js"></script>
+    <script src="../JavaScript/shop.js"></script>
+
+    <!-- Single Vendor JavaScript -->
+    <script src="../JavaScript/SingleVendor.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

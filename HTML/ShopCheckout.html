@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ecom Marketplace Checkout">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/shop.css">
+      <link rel="stylesheet" href="../CSS/style2.css">
+    <link rel="stylesheet" href="../CSS/ShopCheckout.css">
+    <title>Checkout - Ecom Marketplace</title>
+</head>
+
+<body>
+    <div id="navbar"></div>
+    
+    <div class="cart-card">
+        <div class="top-cart d-flex justify-content-between align-items-center">
+            <h3>Shopping Cart</h3>
+            <div class="close-cart" onclick="close_cart()">
+                <i class="bi bi-x-lg"></i>
+            </div>
+        </div>
+
+
+        <div class="items-in-cart">
+            <!--Java-->
+        </div>
+
+        <div class="bottom-cart">
+            <div class="total d-flex justify-content-between align-items-center">
+                <span>Total:</span>
+                <span id="total-price-shop" class="price-cart-total">$0.00</span>
+            </div>
+            <div class="btn-cart d-flex gap-2">
+                <a href="./shop.html" class="btn btn-sm btn-cart-btn1 w-100 text-center text-decoration-none">View
+                    Cart</a>
+            </div>
+        </div>
+    </div>
+    <!--We Must Add It in All Pages-->
+    <div class="wishlist-card">
+        <div class="wishlist-header d-flex align-items-center justify-content-between">
+
+            <h3>My WishList</h3>
+
+            <span class="wishlist-close" onclick="close_wish()">
+                <i class="bi bi-x-circle"></i>
+            </span>
+
+        </div>
+
+        <div class="wishlist-items">
+            <!-- Items in JS -->
+        </div>
+    </div>
+    <!--Until Here-->
+    <main class="checkout main-margin container py-4">
+        
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4 border-bottom pb-4">
+            <div><small class="eyebrow">ECOM MARKETPLACE</small>
+                <h1 class="fw-bold mb-1">Checkout</h1>
+                <p class="text-secondary mb-0">Complete your details to place your order.</p>
+            </div>
+            <div class="steps"><span>✓ Cart</span><b>2 Checkout</b><span>3 Confirmation</span></div>
+        </div>
+        <form id="checkoutForm" novalidate>
+            <div class="row g-4">
+                <div class="col-lg-7">
+                    <section class="panel mb-4">
+                        <div class="panel-title"><span>1</span>
+                            <div>
+                                <h2>Billing Details</h2>
+                                <p>Enter your billing and contact information.</p>
+                            </div>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-md-6"><label class="form-label" for="firstName">First Name *</label><input
+                                    class="form-control" id="firstName" name="firstName" autocomplete="given-name"
+                                    required></div>
+                            <div class="col-md-6"><label class="form-label" for="lastName">Last Name *</label><input
+                                    class="form-control" id="lastName" name="lastName" autocomplete="family-name"
+                                    required></div>
+                            <div class="col-12"><label class="form-label" for="email">Email Address *</label><input
+                                    class="form-control" type="email" id="email" name="email" autocomplete="email"
+                                    required></div>
+                            <div class="col-md-6"><label class="form-label" for="phone">Phone Number *</label><input
+                                    class="form-control" type="tel" id="phone" name="phone" autocomplete="tel" required>
+                            </div>
+                            <div class="col-md-6"><label class="form-label" for="country">Country / Region
+                                    *</label><select class="form-select" id="country" name="country" required>
+                                    <option value="">Choose country</option>
+                                    <option>Syria</option>
+                                    <option>United States</option>
+                                    <option>United Kingdom</option>
+                                    <option>Türkiye</option>
+                                    <option>Germany</option>
+                                    <option>Hungary</option>
+                                    <option>Other</option>
+                                </select></div>
+                            <div class="col-12"><label class="form-label" for="address">Street Address *</label><input
+                                    class="form-control" id="address" name="address" autocomplete="street-address"
+                                    placeholder="House number and street name" required></div>
+                            <div class="col-md-6"><label class="form-label" for="city">Town / City *</label><input
+                                    class="form-control" id="city" name="city" autocomplete="address-level2" required>
+                            </div>
+                            <div class="col-md-6"><label class="form-label" for="postal">Postcode / ZIP</label><input
+                                    class="form-control" id="postal" name="postal" autocomplete="postal-code"></div>
+                            <div class="col-12"><label class="form-label" for="notes">Order Notes
+                                    (optional)</label><textarea class="form-control" id="notes" rows="3"
+                                    placeholder="Delivery instructions"></textarea></div>
+                        </div>
+                    </section>
+                    <section class="panel mb-4">
+                        <div class="panel-title"><span>2</span>
+                            <div>
+                                <h2>Shipping Details</h2>
+                                <p>Choose where your order should be delivered.</p>
+                            </div>
+                        </div>
+                        <div class="form-check mb-3"><input class="form-check-input" type="checkbox"
+                                id="differentShipping"><label class="form-check-label" for="differentShipping">Ship to a
+                                different address</label></div>
+                        <div id="shippingFields" class="row g-3 d-none">
+                            <div class="col-md-6"><label class="form-label" for="shipName">Recipient Name
+                                    *</label><input class="form-control" id="shipName"></div>
+                            <div class="col-md-6"><label class="form-label" for="shipCountry">Country *</label><select
+                                    class="form-select" id="shipCountry">
+                                    <option value="">Choose country</option>
+                                    <option>Syria</option>
+                                    <option>United States</option>
+                                    <option>United Kingdom</option>
+                                    <option>Türkiye</option>
+                                    <option>Germany</option>
+                                    <option>Hungary</option>
+                                </select></div>
+                            <div class="col-12"><label class="form-label" for="shipAddress">Street Address
+                                    *</label><input class="form-control" id="shipAddress"></div>
+                            <div class="col-md-6"><label class="form-label" for="shipCity">Town / City *</label><input
+                                    class="form-control" id="shipCity"></div>
+                            <div class="col-md-6"><label class="form-label" for="shipPostal">Postcode /
+                                    ZIP</label><input class="form-control" id="shipPostal"></div>
+                        </div>
+                        <div class="shipping"><i class="bi bi-truck"></i>
+                            <div><strong>Standard Delivery</strong><small>Estimated delivery: 3–5 business days</small>
+                            </div><b>$5.00</b>
+                        </div>
+                    </section>
+                    <section class="panel mb-4">
+                        <div class="panel-title"><span>3</span>
+                            <div>
+                                <h2>Payment Method</h2>
+                                <p>Select your preferred payment method.</p>
+                            </div>
+                        </div>
+                        <label class="payment-row"><input type="radio" name="payment" value="cash" checked><span><i
+                                    class="bi bi-cash-coin"></i><b>Cash on Delivery</b><small>Pay when your order
+                                    arrives.</small></span></label>
+                        <label class="payment-row"><input type="radio" name="payment" value="card"><span><i
+                                    class="bi bi-credit-card"></i><b>Credit / Debit Card</b><small>Demo selection only;
+                                    no card details collected.</small></span></label>
+                        <label class="payment-row"><input type="radio" name="payment" value="bank"><span><i
+                                    class="bi bi-bank"></i><b>Direct Bank Transfer</b><small>Payment instructions after
+                                    order review.</small></span></label>
+                        <div class="form-check mt-3"><input class="form-check-input" type="checkbox" id="terms"
+                                required><label class="form-check-label" for="terms">I agree to the <a
+                                    href="../pages/terms.html">Terms and Conditions</a> *</label></div>
+                        <p id="formError" class="error" role="alert"></p>
+                    </section>
+                    <button class="place-order" type="submit">Place Order <i class="bi bi-arrow-right"></i></button>
+                    <p class="secure"><i class="bi bi-shield-lock"></i> Demo checkout — no real payment is processed.
+                    </p>
+                </div>
+                <aside class="col-lg-5">
+                    <section class="summary">
+                        <div class="d-flex justify-content-between align-items-center border-bottom pb-3">
+                            <h2>Your Order</h2><small id="summaryCount">2 items</small>
+                        </div>
+                        <div id="orderItems">
+                            <div class="order-item" data-price="255.63" data-qty="1">
+                                <div class="item-icon"><i class="bi bi-laptop"></i></div>
+                                <div class="item-info"><b>Dell Optiplex 9020 Desktop</b><small>Demo
+                                        product</small><small>Qty: 1</small></div><strong>$255.63</strong>
+                            </div>
+                            <div class="order-item" data-price="89.99" data-qty="1">
+                                <div class="item-icon"><i class="bi bi-headphones"></i></div>
+                                <div class="item-info"><b>Wireless Headphones</b><small>Demo product</small><small>Qty:
+                                        1</small></div><strong>$89.99</strong>
+                            </div>
+                        </div>
+                        <div class="coupon"><label class="form-label" for="coupon">Coupon Code</label>
+                            <div class="input-group"><input class="form-control" id="coupon"
+                                    placeholder="Enter coupon"><button class="btn btn-outline-secondary" type="button"
+                                    id="applyCoupon">Apply</button></div><small id="couponMessage"></small>
+                        </div>
+                        <div class="sum-line"><span>Subtotal</span><b id="subtotal">$345.62</b></div>
+                        <div class="sum-line"><span>Shipping</span><b id="shippingCost">$5.00</b></div>
+                        <div id="discountLine" class="sum-line d-none"><span>Discount</span><b
+                                id="discountAmount">-$0.00</b></div>
+                        <div class="grand-total"><span>Total</span><strong id="grandTotal">$350.62</strong></div>
+                        <div class="secure-box"><i class="bi bi-lock-fill"></i> Secure checkout · Easy returns</div>
+                    </section>
+                    <div class="help-box"><i class="bi bi-question-circle"></i>
+                        <div><b>Need help with your order?</b>
+                            <p>Contact our support team if you have questions.</p><a
+                                href="../contact/index.html">Contact Support ↗</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </form>
+    </main>
+    <div class="checkout-modal" id="successModal" role="dialog" aria-modal="true" aria-labelledby="successTitle">
+        <div class="success-card">
+            <div class="success-icon"><i class="bi bi-check-lg"></i></div>
+            <h2 id="successTitle">Order placed successfully!</h2>
+            <p>This is a front-end demo. No real order or payment was submitted.</p>
+            <p>Demo Order: <b id="orderNumber">EC-000001</b></p><button type="button" id="closeSuccess"
+                class="place-order">Continue Shopping</button>
+        </div>
+    </div>
+    <div id="checkoutToast" class="checkout-toast" role="status"></div>
+      <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+
+            <div class="footer-column">
+
+                <a href="index.html" class="footer-logo">
+                    E<span>com</span>
+                </a>
+
+                <h3>Contact</h3>
+
+                <p>
+                    Address: 502 New Design Str, Melbourne,
+                    San Francisco, CA 94110, United States
+                </p>
+
+                <p>
+                    Phone: (+01) 123-456-789
+                </p>
+
+                <p>
+                    E-mail: support@ecom.com
+                </p>
+
+                <p>
+                    Hours: 8:00 - 17:00, Mon - Sat
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Make Money with Us</h3>
+
+                <a href="pages/about.html">
+                    Mission & Vision
+                </a>
+
+                <a href="pages/about.html">
+                    Our Team
+                </a>
+
+                <a href="pages/careers.html">
+                    Careers
+                </a>
+
+                <a href="#">
+                    Press & Media
+                </a>
+
+                <a href="#">
+                    Advertising
+                </a>
+
+                <a href="#">
+                    Testimonials
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Company</h3>
+
+                <a href="blog/index.html">
+                    Our Blog
+                </a>
+
+                <a href="#">
+                    Plans & Pricing
+                </a>
+
+                <a href="#">
+                    Knowledge Base
+                </a>
+
+                <a href="#">
+                    Cookie Policy
+                </a>
+
+                <a href="#">
+                    Office Center
+                </a>
+
+                <a href="blog/index.html">
+                    News & Events
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>My Account</h3>
+
+                <a href="dashboard/index.html">
+                    FAQs
+                </a>
+
+                <a href="dashboard/index.html">
+                    Editor Help
+                </a>
+
+                <a href="dashboard/index.html">
+                    Community
+                </a>
+
+                <a href="#">
+                    Live Chatting
+                </a>
+
+                <a href="contact/index.html">
+                    Contact Us
+                </a>
+
+                <a href="#">
+                    Support Center
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>App & Payment</h3>
+
+                <p>
+                    Download our Apps and get extra 15%
+                    Discount on your first Order!
+                </p>
+
+                <div class="app-buttons">
+
+                    <button>
+                        ▶ Google Play
+                    </button>
+
+                    <button>
+                         App Store
+                    </button>
+
+                </div>
+
+                <h4>
+                    Secured Payment Gateways
+                </h4>
+
+                <div class="payment-icons">
+                    💳 💳 💳 💳
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-brands">
+
+            <div class="container">
+
+                <strong>Electronic:</strong>
+
+                <span>Cell Phones</span>
+                <span>Headphones</span>
+                <span>Television & Video</span>
+                <span>Game Controller</span>
+                <span>Apple Watch</span>
+                <span>iPad</span>
+                <span>Keyboard</span>
+                <span>Samsung</span>
+                <span>Wireless Speaker</span>
+                <span>Gaming Mouse</span>
+
+            </div>
+
+
+            <div class="container">
+
+                <strong>Furniture:</strong>
+
+                <span>Sofa</span>
+                <span>Chair</span>
+                <span>Dining Table</span>
+                <span>Living Room</span>
+                <span>Table Lamp</span>
+                <span>Computer Desk</span>
+                <span>Night Stand</span>
+                <span>Kitchen</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+            Copyright © 2022 Ecom Market. All rights reserved.
+        </div>
+
+    </footer>
+    
+    <div id="toast"></div>
+
+    <script src="../JavaScript/main.js"></script>
+    <script src="../JavaScript/shop.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JavaScript/ShopCheckout.js"></script>
+</body>
+
+</html>

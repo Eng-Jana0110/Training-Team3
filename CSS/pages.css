@@ -1,0 +1,493 @@
+body {
+  background-color: #f4f6f8;
+  color: #253d4e;
+}
+/* 1. Vertical Icon Bar (الجهة اليسرى المطابقة) */
+
+.vertical-icon-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 45px;
+  background: #ffffff;
+  border-right: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15px;
+  z-index: 1000;
+}
+.icon-item {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #64748b;
+}
+.icon-item:hover {
+  color: #2563eb;
+  background: #f8fafc;
+}
+
+/* Hover Flyout Menu */
+.flyout-menu {
+  display: none;
+  position: absolute;
+  left: 45px;
+  top: 0;
+  width: 220px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  padding: 12px 0;
+  z-index: 1001;
+}
+.icon-item:hover .flyout-menu {
+  display: block;
+}
+/* إخفاء القوائم افتراضياً وإظهارها عند Hover */
+.flyout-menu,
+.sub-flyout {
+  display: none;
+}
+
+/* إظهار القائمة الفرعية التابعة لأي أيقونة في الشريط الجانبي عند التحويم عليها */
+.sidebar-item:hover > .flyout-menu {
+  display: block !important;
+}
+
+/* إظهار القائمة الفرعية الثانية المتداخلة */
+.category-item:hover > .sub-flyout {
+  display: block !important;
+}
+
+/* تغيير لون النص للبرتقالي عند التحويم */
+.hover-orange:hover {
+  color: var(--bs-orange, #f97316) !important;
+  background-color: #f8fafc !important;
+}
+.category-item:hover > .sub-flyout {
+  display: block !important;
+}
+
+/* تأثير اللون البرتقالي للتفاعل */
+.hover-orange:hover {
+  color: var(--bs-orange) !important;
+  background-color: #f8fafc !important;
+}
+.hover-orange:hover {
+  color: var(
+    --bs-orange
+  ) !important; /* أو يمكنك استخدام #f97316 إذا أردت درجة برتقالي فاتح محددة */
+}
+/* 2. Page Wrapper */
+.page-wrapper {
+  margin-left: 45px;
+}
+/* 1. إظهار القائمة المنسدلة تلقائياً عند التمرير (Hover) */
+.nav-item.dropdown:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0; /* يمنع وجود فجوة بين الزر والقائمة تتسبب في إغلاقها */
+}
+
+/* 2. تغيير لون العناصر الرئيسية إلى البرتقالي عند الـ Hover */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: var(--bs-orange) !important;
+}
+
+/* 3. تغيير لون عناصر القائمة المنسدلة إلى البرتقالي عند الـ Hover */
+.dropdown-menu .dropdown-item:hover {
+  color: var(--bs-orange) !important;
+  background-color: #f8f9fa; /* خلفية فاتحة ناعمة عند الوقوف على الخيار */
+}
+/* تنسيق الأيقونات العلويّة (بدون خلفية أو حدود) */
+.header-action-icon {
+  color: #7e8e9f !important; /* اللون الرمادي الأزرق الناعم مثل الصورة */
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+/* التفاعل عند التحويم (Hover) ليتحول للون البرتقالي */
+.header-action-icon:hover {
+  color: var(--bs-orange, #f97316) !important;
+}
+
+.badge-orange {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background-color: #f97316;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+/* Layout & Flex Utilities */
+.container-fluid {
+  width: 100%;
+  padding: 0 25px;
+}
+.d-flex {
+  display: flex;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.align-items-center {
+  align-items: center;
+}
+.gap-3 {
+  gap: 15px;
+}
+.gap-4 {
+  gap: 20px;
+}
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  color: #475569;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #3b5284;
+  font-weight: 700;
+}
+.hover-info:hover {
+  color: var(--bs-info) !important;
+}
+/* Hero Section */
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #3b5284;
+  margin-bottom: 1.5rem;
+}
+
+.check-feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: #3b5284;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.check-feature i {
+  color: #3b5284;
+  background: rgba(59, 82, 132, 0.1);
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 1.1rem;
+}
+
+.hero-image {
+  border-radius: 12px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  transition: opacity 0.3s ease; /* تأثير خفيف جداً للصورة */
+}
+
+.hero-image:hover {
+  opacity: 0.95;
+}
+
+/* Stats Section */
+.stats-section {
+  background-color: #f8fafc;
+  border-radius: 16px;
+  padding: 4rem 2rem;
+  margin: 4rem 0;
+}
+
+.stat-number {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #3b5284;
+  margin-bottom: 0.5rem;
+}
+
+/* Team Section */
+.team-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #3b5284;
+  max-width: 800px;
+  line-height: 1.3;
+}
+
+.team-card {
+  border: none;
+  background: transparent;
+  text-align: center;
+}
+
+.team-img-wrapper {
+  background-color: #f1f5f9;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  height: 320px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.team-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.3s ease; /* تكبير خفيف جداً */
+}
+
+.team-card:hover .team-img-wrapper img {
+  transform: scale(1.03);
+}
+
+.team-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #3b5284;
+  margin-bottom: 0.2rem;
+}
+
+/* Partners Section */
+.partners-logos h3 {
+  opacity: 0.5; /* لون باهت قليلاً */
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+}
+
+.partners-logos h3:hover {
+  opacity: 1; /* يوضح عند تمرير الماوس */
+}
+
+/* Store Locations */
+.location-card {
+  padding: 1rem 0;
+}
+
+.location-city {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #3b5284;
+  margin-bottom: 0.5rem;
+}
+
+/* Contact Section */
+.contact-box {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.contact-icon {
+  font-size: 2.5rem;
+  color: #3b5284;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+/* Bottom Features */
+/* حاوية مرنة مخصصة لترتيب العناصر الخمسة أفقياً */
+.features-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+/* بطاقة الميزة الواحدة */
+.feature-item {
+  flex: 1 1 180px;
+  min-width: 180px;
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 5px;
+  padding: 20px 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.2s ease;
+}
+/* تأثير عند تمرير الماوس */
+.feature-item:hover {
+  box-shadow: 0 4px 12px rgba(23, 9, 218, 0.521);
+  background-color: #ffffff;
+  border-color: #07096b;
+}
+/* أيقونات رقيقة متناسقة */
+.feature-icon {
+  font-size: 2rem;
+  color: #2563eb; /* لون أزرق هادئ للأيقونات، يمكنك تعديله للرمادي إذا رغبت */
+  line-height: 1;
+}
+.feature-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #253d4e;
+  margin-bottom: 2px;
+  white-space: nowrap; /* تمنع انقسام العنوان لسطرين */
+}
+.feature-text {
+  font-size: 0.8rem;
+  color: #7e7e7e;
+  margin-bottom: 0;
+  white-space: nowrap; /* تمنع انقسام النص الفرعي لسطرين */
+}
+.btn-social:hover {
+  border-color: #425a8b !important;
+}
+.gb {
+  color: #4285f4;
+}
+.gr {
+  color: #ea4335;
+}
+.gy {
+  color: #fbbc05;
+}
+.gg {
+  color: #34a853;
+}
+.fb {
+  color: #3b9ae1;
+}
+.amazon {
+  position: relative;
+  color: #111;
+}
+.amazon::after {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 4%;
+  bottom: -5px;
+  height: 6px;
+  border-bottom: 3px solid #ff9900;
+  border-radius: 0 0 50% 50%;
+}
+.btn-social:hover {
+  border-color: #425a8b !important;
+}
+.gb {
+  color: #4285f4;
+}
+.gr {
+  color: #ea4335;
+}
+.gy {
+  color: #fbbc05;
+}
+.gg {
+  color: #34a853;
+}
+.fb {
+  color: #3b9ae1;
+}
+.amazon {
+  position: relative;
+  color: #111;
+}
+.amazon::after {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 4%;
+  bottom: -5px;
+  height: 6px;
+  border-bottom: 3px solid #ff9900;
+  border-radius: 0 0 50% 50%;
+}
+
+/* 4) Features strip: hover state */
+.feature {
+  transition: 0.2s;
+}
+.feature:hover {
+  background: #eef3fc;
+  border-color: #425a8b;
+}
+/* regstar page*/
+.auth .form-control {
+  height: 52px;
+  border-radius: 4px;
+}
+.auth .form-control::placeholder {
+  color: #b8c3d6;
+}
+.auth .form-control:focus {
+  border-color: #425a8b;
+  box-shadow: none;
+}
+.auth .btn-lg {
+  height: 52px;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+/* 1) Social buttons: logo colours (Bootstrap has no classes for these) */
+.btn-social:hover {
+  border-color: #425a8b !important;
+}
+.gb {
+  color: #4285f4;
+}
+.gr {
+  color: #ea4335;
+}
+.gy {
+  color: #fbbc05;
+}
+.gg {
+  color: #34a853;
+}
+.fb {
+  color: #3b9ae1;
+}
+.amazon {
+  position: relative;
+  color: #111;
+}
+.amazon::after {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 4%;
+  bottom: -5px;
+  height: 6px;
+  border-bottom: 3px solid #ff9900;
+  border-radius: 0 0 50% 50%;
+}
+
+/* 2) Features strip: hover state */
+.feature {
+  transition: 0.2s;
+}
+.feature:hover {
+  background: #eef3fc;
+  border-color: #425a8b;
+}

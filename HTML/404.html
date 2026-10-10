@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<!--Feras-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404error</title>
+
+  <!-- Google Fonts & FontAwesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/shop.css">
+    <link rel="stylesheet" href="../CSS/style2.css">
+  <link rel="stylesheet" href="../CSS/pages.css">
+</head>
+
+<body>
+  <!--هنا تضع جنى sidebar-->
+   <div id="navbar">
+    </div>
+ 
+  <section class="section-box  main-margin">
+    <!--BreadCrumb -->
+        <div class="row">
+            <div class="col-sm-12">
+                <nav class="breadcrumb" style="--bs-breadcrumb-divider:'&gt';">
+                    <ol class="breadcrumb ">
+                        <li class="breadcrumb-item">
+                            <a href="./index.html">Home</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#">Page</a>
+                        </li>
+                        <li class="breadcrumb-item ">
+                            <a href="./404.html">404 Error</a>
+                        </li>
+
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <div class="cart-card">
+            <div class="top-cart d-flex justify-content-between align-items-center">
+                <h3>Shopping Cart</h3>
+                <div class="close-cart" onclick="close_cart()">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+            </div>
+
+
+            <div class="items-in-cart">
+                <!--Java-->
+            </div>
+
+            <div class="bottom-cart">
+                <div class="total d-flex justify-content-between align-items-center">
+                    <span>Total:</span>
+                    <span id="total-price-shop" class="price-cart-total">$0.00</span>
+                </div>
+                <div class="btn-cart d-flex gap-2">
+                    <a href="../HTML/shop.html"
+                        class="btn btn-sm btn-cart-btn1 w-100 text-center text-decoration-none">View
+                        Cart</a>
+                </div>
+            </div>
+        </div>
+        <!--We Must Add It in All Pages-->
+        <div class="wishlist-card">
+            <div class="wishlist-header d-flex align-items-center justify-content-between">
+
+                <h3>My WishList</h3>
+
+                <span class="wishlist-close" onclick="close_wish()">
+                    <i class="bi bi-x-circle"></i>
+                </span>
+
+            </div>
+
+            <div class="wishlist-items">
+                <!-- Items in JS -->
+            </div>
+        </div>
+        <!--Until Here-->
+    <div class="container">
+      
+      <div class="text-center mb-150 mt-50">
+        <div class="mb-50">
+          <img src="../assests/Feras/404.png" alt="Ecom" />
+        </div>
+        <h3>404 - Page Not Found</h3>
+        <p class="font-md-bold">Looks like, page doesn't exist</p>
+        <div class="mt-15">
+          <a class="btn btn-buy w-auto" href="./home.html">Back to Homepage</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Subscribe Banner Section -->
+  <section class="container px-3 px-md-4 my-5">
+    <div class="rounded-4 px-4 px-lg-5 py-4 text-white overflow-hidden d-flex align-items-center"
+      style="background-color: #0c1e3d; min-height: 220px">
+      <div class="row align-items-center w-100 m-0 g-3">
+        <!-- 1. النص والعنوان (5 أعمدة) -->
+        <div class="col-12 col-lg-5 text-center text-lg-start">
+          <h2 class="fw-bold fs-2 mb-1">
+            Subscribe & Get <span style="color: #f97316">10%</span> Discount
+          </h2>
+          <p class="text-white-50 small mb-0">
+            Get E-mail updates about our latest shop and
+            <strong class="text-white">special offers.</strong>
+          </p>
+        </div>
+
+        <!-- 2. حقل البريد والزر (4 أعمدة) -->
+        <div class="col-12 col-lg-4">
+          <form onsubmit="event.preventDefault()">
+            <div class="input-group">
+              <input type="email" class="form-control border-0 py-2 px-3 small" placeholder="Your email Address"
+                required style="
+                    border-top-left-radius: 6px;
+                    border-bottom-left-radius: 6px;
+                  " />
+              <button class="btn text-white fw-bold px-4 small" type="submit" style="
+                    background-color: #f97316;
+                    border-top-right-radius: 6px;
+                    border-bottom-right-radius: 6px;
+                    border: none;
+                  ">
+                Sign Up
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- 3. صورة الأجهزة (3 أعمدة) -->
+        <div class="col-12 col-lg-3 text-center text-lg-end">
+          <img src="../assests/Feras/tab.png" alt="Devices Mockup" class="img-fluid d-inline-block mt-5"
+            style="max-height: 170px; object-fit: contain" />
+        </div>
+      </div>
+    </div>
+  </section>
+   <!-- FOOTER -->
+    <footer class="footer mt-50">
+
+        <div class="container footer-grid">
+
+
+            <div class="footer-column">
+
+                <a href="index.html" class="footer-logo">
+                    E<span>com</span>
+                </a>
+
+                <h3>Contact</h3>
+
+                <p>
+                    Address: 502 New Design Str, Melbourne,
+                    San Francisco, CA 94110, United States
+                </p>
+
+                <p>
+                    Phone: (+01) 123-456-789
+                </p>
+
+                <p>
+                    E-mail: support@ecom.com
+                </p>
+
+                <p>
+                    Hours: 8:00 - 17:00, Mon - Sat
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Make Money with Us</h3>
+
+                <a href="pages/about.html">
+                    Mission & Vision
+                </a>
+
+                <a href="pages/about.html">
+                    Our Team
+                </a>
+
+                <a href="pages/careers.html">
+                    Careers
+                </a>
+
+                <a href="#">
+                    Press & Media
+                </a>
+
+                <a href="#">
+                    Advertising
+                </a>
+
+                <a href="#">
+                    Testimonials
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Company</h3>
+
+                <a href="blog/index.html">
+                    Our Blog
+                </a>
+
+                <a href="#">
+                    Plans & Pricing
+                </a>
+
+                <a href="#">
+                    Knowledge Base
+                </a>
+
+                <a href="#">
+                    Cookie Policy
+                </a>
+
+                <a href="#">
+                    Office Center
+                </a>
+
+                <a href="blog/index.html">
+                    News & Events
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>My Account</h3>
+
+                <a href="dashboard/index.html">
+                    FAQs
+                </a>
+
+                <a href="dashboard/index.html">
+                    Editor Help
+                </a>
+
+                <a href="dashboard/index.html">
+                    Community
+                </a>
+
+                <a href="#">
+                    Live Chatting
+                </a>
+
+                <a href="contact/index.html">
+                    Contact Us
+                </a>
+
+                <a href="#">
+                    Support Center
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>App & Payment</h3>
+
+                <p>
+                    Download our Apps and get extra 15%
+                    Discount on your first Order!
+                </p>
+
+                <div class="app-buttons">
+
+                    <button>
+                        ▶ Google Play
+                    </button>
+
+                    <button>
+                         App Store
+                    </button>
+
+                </div>
+
+                <h4>
+                    Secured Payment Gateways
+                </h4>
+
+                <div class="payment-icons">
+                    💳 💳 💳 💳
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-brands">
+
+            <div class="container">
+
+                <strong>Electronic:</strong>
+
+                <span>Cell Phones</span>
+                <span>Headphones</span>
+                <span>Television & Video</span>
+                <span>Game Controller</span>
+                <span>Apple Watch</span>
+                <span>iPad</span>
+                <span>Keyboard</span>
+                <span>Samsung</span>
+                <span>Wireless Speaker</span>
+                <span>Gaming Mouse</span>
+
+            </div>
+
+
+            <div class="container">
+
+                <strong>Furniture:</strong>
+
+                <span>Sofa</span>
+                <span>Chair</span>
+                <span>Dining Table</span>
+                <span>Living Room</span>
+                <span>Table Lamp</span>
+                <span>Computer Desk</span>
+                <span>Night Stand</span>
+                <span>Kitchen</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+            Copyright © 2022 Ecom Market. All rights reserved.
+        </div>
+
+    </footer>
+    
+    <div id="toast"></div>
+  <a href="#" class="scroll-top-btn"><i class="fa-solid fa-arrow-up"></i></a>
+  <script src="../JavaScript/main.js"></script>
+    <script src="../JavaScript/shop.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../JavaScript/pages.js"></script>
+</body>
+
+</html>

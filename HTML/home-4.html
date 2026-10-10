@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Our Website is about marketing ">
+    <link rel="shortcut icon" href="../assests/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/shop.css">
+    <link rel="stylesheet" href="../CSS/style2.css">
+    <link rel="stylesheet" href="../CSS/home-4.css">
+      <title>Ecom home 4- Ecom Home</title>
+</head>
+
+<body>
+    
+    <div id="navbar">
+    </div>
+
+    <div class="cart-card">
+        <div class="top-cart d-flex justify-content-between align-items-center">
+            <h3>Shopping Cart</h3>
+            <div class="close-cart" onclick="close_cart()">
+                <i class="bi bi-x-lg"></i>
+            </div>
+        </div>
+
+
+        <div class="items-in-cart">
+            <!--Java-->
+        </div>
+
+        <div class="bottom-cart">
+            <div class="total d-flex justify-content-between align-items-center">
+                <span>Total:</span>
+                <span id="total-price-shop" class="price-cart-total">$0.00</span>
+            </div>
+            <div class="btn-cart d-flex gap-2">
+                <a href="./shop.html" class="btn btn-sm btn-cart-btn1 w-100 text-center text-decoration-none">View
+                    Cart</a>
+            </div>
+        </div>
+    </div>
+   <!--We Must Add It in All Pages-->
+        <div class="wishlist-card">
+            <div class="wishlist-header d-flex align-items-center justify-content-between">
+
+                <h3>My WishList</h3>
+
+                <span class="wishlist-close" onclick="close_wish()">
+                    <i class="bi bi-x-circle"></i>
+                </span>
+
+            </div>
+
+            <div class="wishlist-items">
+                <!-- Items in JS -->
+            </div>
+        </div>
+        <!--Until Here-->
+    
+    
+    <main>
+        <div class="container">
+            <section class="hp-hero">
+                <div><span class="badge bg-warning text-dark">HOME 4</span>
+                    <h1>Powerful Computers for Work and Play</h1>
+                    <p class="lead">Discover quality products and special offers in our computer store.</p><button
+                        class="hp-btn" onclick="document.getElementById('products').scrollIntoView()">Shop Now</button>
+                </div>
+            </section>
+        </div>
+        <section class="hp-section">
+            <div class="container">
+                <h2>Featured Categories</h2>
+                <p class="text-muted mb-4">Choose your necessary products from these categories.</p>
+                <div class="row g-3">
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="hp-cat">
+                            <div class="hp-cat-icon">✦</div><strong>Desktop PC</strong>
+                            <div class="text-muted small">125 items</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="hp-cat">
+                            <div class="hp-cat-icon">✦</div><strong>Laptop</strong>
+                            <div class="text-muted small">225 items</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="hp-cat">
+                            <div class="hp-cat-icon">✦</div><strong>Monitors</strong>
+                            <div class="text-muted small">325 items</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="hp-cat">
+                            <div class="hp-cat-icon">✦</div><strong>Accessories</strong>
+                            <div class="text-muted small">425 items</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="hp-cat">
+                            <div class="hp-cat-icon">✦</div><strong>Gaming PC</strong>
+                            <div class="text-muted small">525 items</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="hp-cat">
+                            <div class="hp-cat-icon">✦</div><strong>Graphics Cards</strong>
+                            <div class="text-muted small">625 items</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hp-section bg-light">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-7">
+                        <div class="hp-banner">
+                            <div><span class="text-warning fw-bold">SPECIAL OFFER</span>
+                                <h2>Computer Store</h2>
+                                <p>Selected products and limited-time prices.</p><button class="hp-btn">Shop
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="hp-deal">
+                            <h2>Shocking Deal</h2>
+                            <p>The opportunity will quickly pass. Take it!</p>
+                            <div class="timer" id="timer">03 : 00 : 00 : 00</div><button class="hp-btn mt-3">View
+                                Deals</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hp-section" id="products">
+            <div class="container">
+                <h2>Featured Products</h2>
+                <p class="text-muted mb-4">Special products in this month.</p>
+                <div class="row g-4">
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3 hp-product">
+                        <div class="hp-card"><img
+                                src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=700&q=80"
+                                alt="iMac Retina 5K">
+                            <div class="hp-card-body">
+                                <div class="hp-brand">Ecom Store</div>
+                                <h3 class="fs-6">iMac Retina 5K</h3><span class="hp-price">$169.3</span><span
+                                    class="hp-old">$225.6</span>
+                                <div class="hp-actions">
+                                    <button class="hp-btn hp-add" 
+                                    data-id="90"
+                                    data-name="iMac Retina 5K"
+                                    data-image="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=700&q=80"
+                                    data-price="169.3"
+                                    onclick="AddFriendToCart(
+                                        this.dataset.id,
+                                        this.dataset.name,
+                                        this.dataset.price,
+                                        this.dataset.image
+                                    )"
+                                    >Add To Cart</button><button
+                                        class="hp-heart"
+                                         data-id="90"
+                                    data-name="iMac Retina 5K"
+                                    data-image="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=700&q=80"
+                                    data-price="169.3"
+                                    onclick="AddFriendWish(
+                                        this.dataset.id,
+                                        this.dataset.name,
+                                        this.dataset.price,
+                                        this.dataset.image
+                                    )"
+
+                                        >♡</button>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3 hp-product">
+                        <div class="hp-card"><img
+                                src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=700&q=80"
+                                alt="MacBook Air M1">
+                            <div class="hp-card-body">
+                                <div class="hp-brand">Ecom Store</div>
+                                <h3 class="fs-6">MacBook Air M1</h3><span class="hp-price">$197.3</span><span
+                                    class="hp-old">$260.6</span>
+                                <div class="hp-actions"><button class="hp-btn hp-add" 
+                                    data-id="91"
+                                    data-name="MacBook Air M1"
+                                    data-image="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=700&q=80"
+                                    data-price="197.3"
+                                    onclick="AddFriendToCart(
+                                        this.dataset.id,
+                                        this.dataset.name,
+                                        this.dataset.price,
+                                        this.dataset.image
+                                    )">Add To Cart</button><button
+                                        class="hp-heart"
+                                        data-id="91"
+                                    data-name="MacBook Air M1"
+                                    data-image="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=700&q=80"
+                                    data-price="197.3"
+                                    onclick="AddFriendWish(
+                                        this.dataset.id,
+                                        this.dataset.name,
+                                        this.dataset.price,
+                                        this.dataset.image
+                                    )"
+
+                                        >♡</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3 hp-product">
+                        <div class="hp-card"><img
+                                src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=700&q=80"
+                                alt="HP All-in-One">
+                            <div class="hp-card-body">
+                                <div class="hp-brand">Ecom Store</div>
+                                <h3 class="fs-6">HP All-in-One</h3><span class="hp-price">$225.3</span><span
+                                    class="hp-old">$295.6</span>
+                                <div class="hp-actions"><button class="hp-btn hp-add" 
+                                    data-id="92"
+                                    data-name="HP All-in-One"
+                                    data-image="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=700&q=80"
+                                    data-price="225.3"
+                                    onclick="AddFriendToCart(
+                                        this.dataset.id,
+                                        this.dataset.name,
+                                        this.dataset.price,
+                                        this.dataset.image
+                                    )">Add To Cart</button><button
+                                    class="hp-heart"
+                                         data-id="92"
+                                    data-name="HP All-in-One"
+                                    data-image="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=700&q=80"
+                                    data-price="225.3"
+                                    onclick="AddFriendWish(
+                                        this.dataset.id,
+                                        this.dataset.name,
+                                        this.dataset.price,
+                                        this.dataset.image
+                                    )"
+
+                                        >♡</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3 hp-product">
+                        <div class="hp-card"><img
+                                src="https://images.unsplash.com/photo-1547394765-185e1e68f34e?auto=format&fit=crop&w=700&q=80"
+                                alt="Chromecast TV">
+                            <div class="hp-card-body">
+                                <div class="hp-brand">Ecom Store</div>
+                                <h3 class="fs-6">Chromecast TV</h3><span class="hp-price">$253.3</span><span
+                                    class="hp-old">$330.6</span>
+                                <div class="hp-actions"><button class="hp-btn hp-add" 
+                                    data-id="93"
+                                    data-name="Chromecast TV"
+                                    data-image="https://images.unsplash.com/photo-1547394765-185e1e68f34e?auto=format&fit=crop&w=700&q=80"
+                                    data-price="253.3"
+                                    onclick="AddFriendToCart(
+                                        this.dataset.id,
+                                        this.dataset.name,
+                                        this.dataset.price,
+                                        this.dataset.image
+                                    )">Add To Cart</button><button
+                                    class="hp-heart"
+                                         data-id="93"
+                                    data-name="Chromecast TV"
+                                    data-image="https://images.unsplash.com/photo-1547394765-185e1e68f34e?auto=format&fit=crop&w=700&q=80"
+                                    data-price="253.3"
+                                    onclick="AddFriendWish(
+                                        this.dataset.id,
+                                        this.dataset.name,
+                                        this.dataset.price,
+                                        this.dataset.image
+                                    )"
+
+                                        >♡</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3 hp-product">
+                        <div class="hp-card"><img
+                                src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=700&q=80"
+                                alt="Galaxy Tab">
+                            <div class="hp-card-body">
+                                <div class="hp-brand">Ecom Store</div>
+                                <h3 class="fs-6">Galaxy Tab</h3><span class="hp-price">$281.3</span><span
+                                    class="hp-old">$365.6</span>
+                                <div class="hp-actions"><button class="hp-btn hp-add" 
+                                    data-id="94"
+                                    data-name="Galaxy Tab"
+                                    data-image="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=700&q=80"
+                                    data-price="281.3"
+                                    onclick="AddFriendToCart(
+                                        this.dataset.id,
+                                        this.dataset.name,
+                                        this.dataset.price,
+                                        this.dataset.image
+                                    )">Add To Cart</button><button
+                                        class="hp-heart"
+                                         data-id="94"
+                                    data-name="Galaxy Tab"
+                                    data-image="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=700&q=80"
+                                    data-price="281.3"
+                                    onclick="AddFriendWish(
+                                        this.dataset.id,
+                                        this.dataset.name,
+                                        this.dataset.price,
+                                        this.dataset.image
+                                    )"
+                                      >♡</button>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3 hp-product">
+                        <div class="hp-card"><img
+                                src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=700&q=80"
+                                alt="AirPods Pro">
+                            <div class="hp-card-body">
+                                <div class="hp-brand">Ecom Store</div>
+                                <h3 class="fs-6">AirPods Pro</h3><span class="hp-price">$309.3</span><span
+                                    class="hp-old">$400.6</span>
+                                <div class="hp-actions"><button class="hp-btn hp-add" 
+                                    data-id="95"
+                                    data-name="AirPods Pro"
+                                    data-image="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=700&q=80"
+                                    data-price="309.3"
+                                    onclick="AddFriendToCart(
+                                        this.dataset.id,
+                                        this.dataset.name,
+                                        this.dataset.price,
+                                        this.dataset.image
+                                    )">Add To Cart</button>
+                                    <button  class="hp-heart"
+                                       data-id="95"
+                                    data-name="AirPods Pro"
+                                    data-image="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=700&q=80"
+                                    data-price="309.3"
+                                    onclick="AddFriendWish(
+                                        this.dataset.id,
+                                        this.dataset.name,
+                                        this.dataset.price,
+                                        this.dataset.image
+                                    )"
+
+                                    >♡</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hp-section bg-light">
+            <div class="container">
+                <h2>Latest News & Events</h2>
+                <div class="row g-4 mt-1">
+                    <div class="col-md-4">
+                        <article class="hp-news"><img
+                                src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=700&q=80"
+                                alt="">
+                            <div><small class="text-muted">Ecom Journal</small>
+                                <h3 class="fs-5 mt-2">Smart shopping ideas for modern customers</h3><a href="#"
+                                    class="text-warning fw-bold">Read more</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="hp-news"><img
+                                src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=700&q=80"
+                                alt="">
+                            <div><small class="text-muted">Ecom Journal</small>
+                                <h3 class="fs-5 mt-2">Smart shopping ideas for modern customers</h3><a href="#"
+                                    class="text-warning fw-bold">Read more</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="hp-news"><img
+                                src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=700&q=80"
+                                alt="">
+                            <div><small class="text-muted">Ecom Journal</small>
+                                <h3 class="fs-5 mt-2">Smart shopping ideas for modern customers</h3><a href="#"
+                                    class="text-warning fw-bold">Read more</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hp-section">
+            <div class="container">
+                <div class="row g-3">
+                    <div class="col-md-3">
+                        <div class="hp-service"><i class="bi bi-truck"></i>
+                            <h5>Free Delivery</h5>
+                            <p class="small text-muted">From orders over $10</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="hp-service"><i class="bi bi-headset"></i>
+                            <h5>Support 24/7</h5>
+                            <p class="small text-muted">Shop with an expert</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="hp-service"><i class="bi bi-gift"></i>
+                            <h5>Gift Voucher</h5>
+                            <p class="small text-muted">Refer a friend</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="hp-service"><i class="bi bi-shield-check"></i>
+                            <h5>Secure Payment</h5>
+                            <p class="small text-muted">100% protected</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hp-section">
+            <div class="container">
+                <div class="hp-newsletter text-center">
+                    <h2>Subscribe to our newsletter</h2>
+                    <p class="text-muted">Get products, offers and marketplace news.</p>
+                    <form id="newsletter" class="row justify-content-center g-2">
+                        <div class="col-md-6"><input class="form-control p-3" type="email" required
+                                placeholder="Your email address"></div>
+                        <div class="col-auto"><button class="hp-btn p-3">Subscribe</button></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+     
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+
+            <div class="footer-column">
+
+                <a href="index.html" class="footer-logo">
+                    E<span>com</span>
+                </a>
+
+                <h3>Contact</h3>
+
+                <p>
+                    Address: 502 New Design Str, Melbourne,
+                    San Francisco, CA 94110, United States
+                </p>
+
+                <p>
+                    Phone: (+01) 123-456-789
+                </p>
+
+                <p>
+                    E-mail: support@ecom.com
+                </p>
+
+                <p>
+                    Hours: 8:00 - 17:00, Mon - Sat
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Make Money with Us</h3>
+
+                <a href="pages/about.html">
+                    Mission & Vision
+                </a>
+
+                <a href="pages/about.html">
+                    Our Team
+                </a>
+
+                <a href="pages/careers.html">
+                    Careers
+                </a>
+
+                <a href="#">
+                    Press & Media
+                </a>
+
+                <a href="#">
+                    Advertising
+                </a>
+
+                <a href="#">
+                    Testimonials
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Company</h3>
+
+                <a href="blog/index.html">
+                    Our Blog
+                </a>
+
+                <a href="#">
+                    Plans & Pricing
+                </a>
+
+                <a href="#">
+                    Knowledge Base
+                </a>
+
+                <a href="#">
+                    Cookie Policy
+                </a>
+
+                <a href="#">
+                    Office Center
+                </a>
+
+                <a href="blog/index.html">
+                    News & Events
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>My Account</h3>
+
+                <a href="dashboard/index.html">
+                    FAQs
+                </a>
+
+                <a href="dashboard/index.html">
+                    Editor Help
+                </a>
+
+                <a href="dashboard/index.html">
+                    Community
+                </a>
+
+                <a href="#">
+                    Live Chatting
+                </a>
+
+                <a href="contact/index.html">
+                    Contact Us
+                </a>
+
+                <a href="#">
+                    Support Center
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>App & Payment</h3>
+
+                <p>
+                    Download our Apps and get extra 15%
+                    Discount on your first Order!
+                </p>
+
+                <div class="app-buttons">
+
+                    <button>
+                        ▶ Google Play
+                    </button>
+
+                    <button>
+                         App Store
+                    </button>
+
+                </div>
+
+                <h4>
+                    Secured Payment Gateways
+                </h4>
+
+                <div class="payment-icons">
+                    💳 💳 💳 💳
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-brands">
+
+            <div class="container">
+
+                <strong>Electronic:</strong>
+
+                <span>Cell Phones</span>
+                <span>Headphones</span>
+                <span>Television & Video</span>
+                <span>Game Controller</span>
+                <span>Apple Watch</span>
+                <span>iPad</span>
+                <span>Keyboard</span>
+                <span>Samsung</span>
+                <span>Wireless Speaker</span>
+                <span>Gaming Mouse</span>
+
+            </div>
+
+
+            <div class="container">
+
+                <strong>Furniture:</strong>
+
+                <span>Sofa</span>
+                <span>Chair</span>
+                <span>Dining Table</span>
+                <span>Living Room</span>
+                <span>Table Lamp</span>
+                <span>Computer Desk</span>
+                <span>Night Stand</span>
+                <span>Kitchen</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+            Copyright © 2022 Ecom Market. All rights reserved.
+        </div>
+
+    </footer>
+
+
+    <div id="toast"></div>
+
+
+    <!--Scropts-->
+    <script src="../JavaScript/home-4.js"></script>
+     <script src="../JavaScript/shop.js"></script>
+    <script src="../JavaScript/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

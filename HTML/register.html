@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Google Fonts & FontAwesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/shop.css">
+    <link rel="stylesheet" href="../CSS/style2.css">
+  <link href="../CSS/pages.css" rel="stylesheet">
+  <title>Register</title>
+</head>
+
+<body>
+  <!-- header goes here -->
+  <!-- الشريط الجانبي العمودي -->
+  <!--sidebar هنا تضع جنى ال -->
+
+  <div id="navbar">
+  </div>
+  <!-- Top Bar -->
+  <div class="top-bar bg-white">
+    <div class="cart-card">
+      <div class="top-cart d-flex justify-content-between align-items-center">
+        <h3>Shopping Cart</h3>
+        <div class="close-cart" onclick="close_cart()">
+          <i class="bi bi-x-lg"></i>
+        </div>
+      </div>
+
+
+      <div class="items-in-cart">
+        <!--Java-->
+      </div>
+
+      <div class="bottom-cart">
+        <div class="total d-flex justify-content-between align-items-center">
+          <span>Total:</span>
+          <span id="total-price-shop" class="price-cart-total">$0.00</span>
+        </div>
+        <div class="btn-cart d-flex gap-2">
+          <a href="./shop.html" class="btn btn-sm btn-cart-btn1 w-100 text-center text-decoration-none">View
+            Cart</a>
+        </div>
+      </div>
+    </div>
+    <!--We Must Add It in All Pages-->
+    <div class="wishlist-card">
+      <div class="wishlist-header d-flex align-items-center justify-content-between">
+
+        <h3>My WishList</h3>
+
+        <span class="wishlist-close" onclick="close_wish()">
+          <i class="bi bi-x-circle"></i>
+        </span>
+
+      </div>
+
+      <div class="wishlist-items">
+        <!-- Items in JS -->
+      </div>
+    </div>
+    <!--Until Here-->
+  </div>
+
+  <main class="container my-5 auth">
+    <div class="row g-5">
+      <div class="col-lg-5 offset-lg-1">
+        <h1 class="display-6 fw-bold text-primary mb-1">Create an account</h1>
+        <p class="text-secondary">
+          Access to all features. No credit card required.
+        </p>
+
+        <form class="needs-validation mt-4" novalidate>
+          <div class="mb-4">
+            <label for="rn" class="form-label text-secondary">Full Name *</label>
+            <input id="rn" class="form-control form-control-lg" placeholder="Steven job" required />
+            <div class="invalid-feedback">Please enter your full name.</div>
+          </div>
+          <div class="mb-4">
+            <label for="re" class="form-label text-secondary">Email *</label>
+            <input id="re" type="email" class="form-control form-control-lg" placeholder="stevenjob@gmail.com"
+              required />
+            <div class="invalid-feedback">Enter a valid email address.</div>
+          </div>
+          <div class="mb-4">
+            <label for="ru" class="form-label text-secondary">Username *</label>
+            <input id="ru" class="form-control form-control-lg" placeholder="stevenjob" minlength="3" required />
+            <div class="invalid-feedback">
+              Username must be at least 3 characters.
+            </div>
+          </div>
+          <div class="mb-4">
+            <label for="rp" class="form-label text-secondary">Password *</label>
+            <input id="rp" type="password" class="form-control form-control-lg" placeholder="*****************"
+              minlength="8" required />
+            <div class="invalid-feedback">Use at least 8 characters.</div>
+          </div>
+          <div class="mb-4">
+            <label for="rc" class="form-label text-secondary">Re-Password *</label>
+            <input id="rc" type="password" class="form-control form-control-lg" placeholder="*****************"
+              required />
+            <div class="invalid-feedback">Passwords do not match.</div>
+          </div>
+          <div class="form-check mb-4">
+            <input id="rt" type="checkbox" class="form-check-input" required />
+            <label for="rt" class="form-check-label">By clicking Register button, you agree our
+              <a href="#">terms and policy</a>,</label>
+            <div class="invalid-feedback">You must accept the terms.</div>
+          </div>
+          <button class="btn btn-primary btn-lg w-100">Sign Up</button>
+          <p class="small text-secondary mt-4">
+            Already have an account?
+            <a href="login.html" class="fw-semibold text-decoration-none">Sign In</a>
+          </p>
+        </form>
+        <div id="msg"></div>
+      </div>
+
+      <div class="col-lg-4 offset-lg-1">
+        <h2 class="h5 fw-bold text-primary text-center mb-4">
+          Use Social Network Account
+        </h2>
+        <button type="button" class="btn btn-social bg-white border w-100 py-3 fw-bold text-primary mb-3">
+          Sign up with
+          <b><span class="gb">G</span><span class="gr">o</span><span class="gy">o</span><span class="gb">g</span><span
+              class="gg">l</span><span class="gr">e</span></b>
+        </button>
+        <button type="button" class="btn btn-social bg-white border w-100 py-3 fw-bold text-primary mb-3">
+          Sign up with <b class="fb">Facebook</b>
+        </button>
+        <button type="button" class="btn btn-social bg-white border w-100 py-3 fw-bold text-primary mb-4">
+          Sign up with <b class="amazon">amazon</b>
+        </button>
+        <p class="small text-center text-secondary">
+          Buying for work?
+          <a href="#" class="text-decoration-none">Create a free business account</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Subscribe Banner Section -->
+  <section class="container-fluid px-3 px-md-4 my-5">
+    <div class="rounded-4 px-4 px-lg-5 py-4 text-white overflow-hidden d-flex align-items-center"
+      style="background-color: #0c1e3d; min-height: 220px;">
+
+      <div class="row align-items-center w-100 m-0 g-3">
+
+        <!-- 1. النص والعنوان (5 أعمدة) -->
+        <div class="col-12 col-lg-5 text-center text-lg-start">
+          <h2 class="fw-bold fs-2 mb-1">
+            Subscribe & Get <span style="color: #f97316;">10%</span> Discount
+          </h2>
+          <p class="text-white-50 small mb-0">
+            Get E-mail updates about our latest shop and <strong class="text-white">special offers.</strong>
+          </p>
+        </div>
+
+        <!-- 2. حقل البريد والزر (4 أعمدة) -->
+        <div class="col-12 col-lg-4">
+          <form onsubmit="event.preventDefault();">
+            <div class="input-group">
+              <input type="email" class="form-control border-0 py-2 px-3 small" placeholder="Your email Address"
+                required style="border-top-left-radius: 6px; border-bottom-left-radius: 6px;">
+              <button class="btn text-white fw-bold px-4 small" type="submit"
+                style="background-color: #f97316; border-top-right-radius: 6px; border-bottom-right-radius: 6px; border: none;">
+                Sign Up
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- 3. صورة الأجهزة (3 أعمدة) -->
+        <div class="col-12 col-lg-3 text-center text-lg-end">
+          <img src="./image pages/tab.png" alt="Devices Mockup" class="img-fluid d-inline-block mt-5"
+            style="max-height: 170px; object-fit: contain;">
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+
+            <div class="footer-column">
+
+                <a href="index.html" class="footer-logo">
+                    E<span>com</span>
+                </a>
+
+                <h3>Contact</h3>
+
+                <p>
+                    Address: 502 New Design Str, Melbourne,
+                    San Francisco, CA 94110, United States
+                </p>
+
+                <p>
+                    Phone: (+01) 123-456-789
+                </p>
+
+                <p>
+                    E-mail: support@ecom.com
+                </p>
+
+                <p>
+                    Hours: 8:00 - 17:00, Mon - Sat
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Make Money with Us</h3>
+
+                <a href="pages/about.html">
+                    Mission & Vision
+                </a>
+
+                <a href="pages/about.html">
+                    Our Team
+                </a>
+
+                <a href="pages/careers.html">
+                    Careers
+                </a>
+
+                <a href="#">
+                    Press & Media
+                </a>
+
+                <a href="#">
+                    Advertising
+                </a>
+
+                <a href="#">
+                    Testimonials
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Company</h3>
+
+                <a href="blog/index.html">
+                    Our Blog
+                </a>
+
+                <a href="#">
+                    Plans & Pricing
+                </a>
+
+                <a href="#">
+                    Knowledge Base
+                </a>
+
+                <a href="#">
+                    Cookie Policy
+                </a>
+
+                <a href="#">
+                    Office Center
+                </a>
+
+                <a href="blog/index.html">
+                    News & Events
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>My Account</h3>
+
+                <a href="dashboard/index.html">
+                    FAQs
+                </a>
+
+                <a href="dashboard/index.html">
+                    Editor Help
+                </a>
+
+                <a href="dashboard/index.html">
+                    Community
+                </a>
+
+                <a href="#">
+                    Live Chatting
+                </a>
+
+                <a href="contact/index.html">
+                    Contact Us
+                </a>
+
+                <a href="#">
+                    Support Center
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>App & Payment</h3>
+
+                <p>
+                    Download our Apps and get extra 15%
+                    Discount on your first Order!
+                </p>
+
+                <div class="app-buttons">
+
+                    <button>
+                        ▶ Google Play
+                    </button>
+
+                    <button>
+                         App Store
+                    </button>
+
+                </div>
+
+                <h4>
+                    Secured Payment Gateways
+                </h4>
+
+                <div class="payment-icons">
+                    💳 💳 💳 💳
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-brands">
+
+            <div class="container">
+
+                <strong>Electronic:</strong>
+
+                <span>Cell Phones</span>
+                <span>Headphones</span>
+                <span>Television & Video</span>
+                <span>Game Controller</span>
+                <span>Apple Watch</span>
+                <span>iPad</span>
+                <span>Keyboard</span>
+                <span>Samsung</span>
+                <span>Wireless Speaker</span>
+                <span>Gaming Mouse</span>
+
+            </div>
+
+
+            <div class="container">
+
+                <strong>Furniture:</strong>
+
+                <span>Sofa</span>
+                <span>Chair</span>
+                <span>Dining Table</span>
+                <span>Living Room</span>
+                <span>Table Lamp</span>
+                <span>Computer Desk</span>
+                <span>Night Stand</span>
+                <span>Kitchen</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+            Copyright © 2022 Ecom Market. All rights reserved.
+        </div>
+
+    </footer>
+    
+    <div id="toast"></div>
+  <a href="#" class="scroll-top-btn"><i class="fa-solid fa-arrow-up"></i></a>
+  
+    <script src="../JavaScript/shop.js"></script>
+    <script src="../JavaScript/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../JavaScript/register.js"></script>
+  <script src="../JavaScript/pages.js"></script>
+</body>
+
+</html>

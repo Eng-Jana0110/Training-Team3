@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Our Website is about marketing ">
+    <link rel="shortcut icon" href="../assests/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/shop.css">
+    <link rel="stylesheet" href="../CSS/style2.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title> Shop Grid - Ecom-Marketplace Template</title>
+
+<body>
+
+
+    <div id="navbar">
+    </div>
+        <div class="cart-card">
+        <div class="top-cart d-flex justify-content-between align-items-center">
+            <h3>Shopping Cart</h3>
+            <div class="close-cart" onclick="close_cart()">
+                <i class="bi bi-x-lg"></i>
+            </div>
+        </div>
+
+
+        <div class="items-in-cart">
+            <!--Java-->
+        </div>
+
+        <div class="bottom-cart">
+            <div class="total d-flex justify-content-between align-items-center">
+                <span>Total:</span>
+                <span id="total-price-shop" class="price-cart-total">$0.00</span>
+            </div>
+            <div class="btn-cart d-flex gap-2">
+                <a href="./shop.html" class="btn btn-sm btn-cart-btn1 w-100 text-center text-decoration-none">View
+                    Cart</a>
+            </div>
+        </div>
+    </div>
+    <!--We Must Add It in All Pages-->
+        <div class="wishlist-card">
+            <div class="wishlist-header d-flex align-items-center justify-content-between">
+
+                <h3>My WishList</h3>
+
+                <span class="wishlist-close" onclick="close_wish()">
+                    <i class="bi bi-x-circle"></i>
+                </span>
+
+            </div>
+
+            <div class="wishlist-items">
+                <!-- Items in JS -->
+            </div>
+        </div>
+        <!--Until Here-->
+    <div class="container">
+        
+        <table class="table table-bordered table-sm table table-bordered  table-hover">
+            <tr>
+                <td class="new-color text-center"> Products</td>
+                <td class="text-center">
+                    <img src="../assests/imgcompare/img1-compare.png" class="sh-copmare-img " alt=""> <br>
+                    <a href="../JavaScript/shop-single-product.html" class="text-decoration-none fw-bold new-color me-5 ms-5">Dell
+                        Optiplex 9020 Small Form
+                        Business Desktop Tower PC</a>
+                </td>
+                <td class="text-center">
+                    <img src="../assests/imgcompare/img2-compare.png" class="sh-copmare-img " alt=""> <br>
+                    <a href="../JavaScript/shop-single-product.html" class="text-decoration-none fw-bold new-color ms-5 me-5">HP
+                        24 All-in-One PC, Intel Core i3-1115G4, 4GB RAM</a>
+                </td>
+                <td class="text-center">
+                    <img src="../assests/imgcompare/img3-compare.png" class="sh-copmare-img " alt=""> <br>
+                    <a href="../JavaScript/shop-single-product.html"
+                        class="text-decoration-none fw-bold new-color ms-5 me-5">Logitech
+                        Brio 4K Webcam, Ultra 4K
+                        HD Video Calling</a>
+                </td>
+            </tr>
+            <!-- Review -->
+
+            <tr>
+                <td class="small text-secondary text-center">Review </td>
+                <td class="small text-secondary text-center"><i class="bi bi-star-fill text-warning "></i><i
+                        class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i
+                        class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i>
+                    <span class=" new-color-2">(65) </span>
+                </td>
+
+                <td class="small text-secondary text-center"><i class="bi bi-star-fill text-warning "></i><i
+                        class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i
+                        class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <span class="new-color-2">(65) </span>
+                </td>
+                <td class="small text-secondary text-center"><i class="bi bi-star-fill text-warning "></i> <i
+                        class="bi bi-star-fill text-warning "></i><i class="bi bi-star-fill text-warning "></i><i
+                        class="bi bi-star-fill text-warning"><i class="bi bi-star-fill text-warning"></i>
+                        <span class="new-color-2">(65) </span>
+                    </i>
+                </td>
+
+            </tr>
+
+            <!-- Screen Size -->
+            <tr>
+                <td class="small new-color text-center">Screen Size </td>
+                <td class="small new-color text-center">42" </td>
+                <td class="small new-color text-center">42" </td>
+                <td class="small new-color text-center">42" </td>
+
+            </tr>
+
+            <!-- Screen Definition -->
+
+            <tr>
+                <td class="small new-color text-center">Screen Definition </td>
+                <td class="small new-color text-center">Full High Definition </td>
+                <td class="small new-color text-center">In Stock </td>
+                <td class="small new-color text-center">pre-order </td>
+
+            </tr>
+            <!-- Product Type -->
+            <tr>
+                <td class="new-color text-center"> Product Type</td>
+                <td class="new-color text-center"> LED LCDs</td>
+                <td class="new-color text-center"> LED LCDs </td>
+                <td class="new-color text-center">LED LCDs </td>
+            </tr>
+            <!-- Connectivity -->
+            <tr>
+                <td class="new-color text-center">Connectivity</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <!-- prıce -->
+            <tr>
+                <td class="new-color text-center"> Price </td>
+                <td class="new-color text-center fw-bold">$2786.5</td>
+                <td class="new-color text-center fw-bold">$2856.0</td>
+                <td class="new-color text-center fw-bold">$2950.0</td>
+
+            </tr>
+
+            <!-- Stock status -->
+
+            <tr>
+                <td class="new-color text-center">Stock status </td>
+                <td class="text-center"><button class=" btn shinstock  new-color fw-bold" type="button">in
+                        stock</button> </td>
+                <td class="text-center"><button class=" btn  bg-pink pink  fw-bold" type="button">out of
+                        stock</button> </td>
+                <td class="text-center"><button class=" btn shinstock new-color fw-bold" type="button">in
+                        stock</button> </td>
+
+            </tr>
+            <!-- Buy now -->
+            <tr>
+                <td class="text-center new-color">Buy now</td>
+                <td class="text-center">
+                    <a href="./shop-cart.html" class="btn sh-addbtn text-center fw-bold" type="button"> Add to
+                        cart</a>
+                </td>
+                <td class="text-center">
+                    <a href="./shop-cart.html" class="btn sh-addbtn text-center fw-bold" type="button"> Add to
+                        cart</a>
+                </td>
+                <td class="text-center">
+                    <a href="./shop-cart.html" class="btn sh-addbtn text-center fw-bold" type="button"> Add to
+                        cart</a>
+                </td>
+
+            </tr>
+            <!-- remove -->
+            <tr>
+                <td class="text-center new-color"> remove</td>
+                <td class="text-center"><a href="#" class="text-decoration-none new-color fs-3 "><i
+                            class="bi bi-trash-fill"></i></a></td>
+                <td class="text-center"><a href="#" class="text-decoration-none new-color fs-3 "><i
+                            class="bi bi-trash-fill"></i></a></td>
+                <td class="text-center"><a href="#" class="text-decoration-none new-color fs-3 "><i
+                            class="bi bi-trash-fill"></i></a></td>
+
+            </tr>
+
+
+
+
+        </table>
+
+
+        <div class="container-fluid">
+            <div class="row m-0">
+                <div class="col-md-12">
+                    <h4 class="new-color fw-bold me-5">Recently viewed items</h4>
+                </div>
+                <div class="row justify-content-center me-5 ">
+                    <div class="col-md-3">
+                        <div class="card  border border-0  sh-card-width2 sh-compare-card2">
+                            <!-- لاقسم الكارد جزء يمين ويسار عاملته انه متل  contaıner -->
+                            <div class="row g-0">
+
+                                <div class="col-md-4">
+                                    <img src="../assests/imgcompare/img1-compare.png" class="img-fluid " alt="">
+                                </div>
+
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <small class="new-color-2">Dell</small><br>
+                                        <a href="./shop-single-product.html"
+                                            class="new-color fw-bold text-decoration-none">Dell Optiplex 9020 Small Form
+                                            Business Desktop</a>
+                                        <br><span><i class="bi bi-star-fill fs-5 orng-color"> <span><i
+                                                        class="bi bi-star-fill fs-5 orng-color"></i><span><i
+                                                            class="bi bi-star-fill fs-5 orng-color"></i><span><i
+                                                                class="bi bi-star-fill fs-5 orng-color"></i><span><i
+                                                                    class="bi bi-star-fill fs-5 orng-color"></i></i></span>
+                                    </div>
+                                    <span class="fw-bold new-color">$2556.3 <del
+                                            class="new-color-2">$3225.6</del></span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card  border border-0 sh-card-width sh-compare-card">
+                            <!-- لاقسم الكارد جزء يمين ويسار عاملته انه متل  contaıner -->
+                            <div class="row g-0">
+
+                                <div class="col-md-4">
+                                    <img src="../assests/imgcompare/img2-compare.png" class="img-fluid " alt="">
+                                </div>
+
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <small class="new-color-2">Dell</small><br>
+                                        <a href="./shop-single-product.html"
+                                            class="new-color fw-bold text-decoration-none">Dell Optiplex 9020 Small Form
+                                            Business Desktop</a>
+                                        <br><span><i class="bi bi-star-fill fs-5 orng-color"> <span><i
+                                                        class="bi bi-star-fill fs-5 orng-color"></i><span><i
+                                                            class="bi bi-star-fill fs-5 orng-color"></i><span><i
+                                                                class="bi bi-star-fill fs-5 orng-color"></i><span><i
+                                                                    class="bi bi-star-fill fs-5 orng-color"></i></i></span>
+                                    </div>
+                                    <span class="fw-bold new-color">$2556.3 <del
+                                            class="new-color-2">$3225.6</del></span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card  border border-0 sh-card-width sh-compare-card">
+                            <!-- لاقسم الكارد جزء يمين ويسار عاملته انه متل  contaıner -->
+                            <div class="row g-0">
+
+                                <div class="col-md-4">
+                                    <img src="../assests/imgcompare/imgsp1 (1).png" class="img-fluid " alt="">
+                                </div>
+
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <small class="new-color-2">Dell</small><br>
+                                        <a href="./shop-single-product.html"
+                                            class="new-color fw-bold text-decoration-none">Dell Optiplex 9020 Small Form
+                                            Business Desktop</a>
+                                        <br><span><i class="bi bi-star-fill fs-5 orng-color"> <span><i
+                                                        class="bi bi-star-fill fs-5 orng-color"></i><span><i
+                                                            class="bi bi-star-fill fs-5 orng-color"></i><span><i
+                                                                class="bi bi-star-fill fs-5 orng-color"></i><span><i
+                                                                    class="bi bi-star-fill fs-5 orng-color"></i></i></span>
+                                    </div>
+                                    <span class="fw-bold new-color">$2556.3 <del
+                                            class="new-color-2">$3225.6</del></span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card  border border-0 sh-card-width sh-compare-card">
+                            <!-- لاقسم الكارد جزء يمين ويسار عاملته انه متل  contaıner -->
+                            <div class="row g-0">
+
+                                <div class="col-md-4">
+                                    <img src="../assests/imgcompare/imgsp1 (1).png" class="img-fluid " alt="">
+                                </div>
+
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <small class="new-color-2">Dell</small><br>
+                                        <a href="./shop-single-product.html"
+                                            class="new-color fw-bold text-decoration-none">Dell Optiplex 9020 Small Form
+                                            Business Desktop</a>
+                                        <br><span><i class="bi bi-star-fill fs-5 orng-color"> <span><i
+                                                        class="bi bi-star-fill fs-5 orng-color"></i><span><i
+                                                            class="bi bi-star-fill fs-5 orng-color"></i><span><i
+                                                                class="bi bi-star-fill fs-5 orng-color"></i><span><i
+                                                                    class="bi bi-star-fill fs-5 orng-color"></i></i></span>
+                                    </div>
+                                    <span class="fw-bold new-color">$2556.3 <del
+                                            class="new-color-2">$3225.6</del></span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="row mt-5 ">
+                    <div class="col-md-12">
+                        <h4 class="new-color fw-bold me-5">You may also like</h4>
+                    </div>
+                    <div class="row justify-content-center  mt-2 ">
+                        <!-- هون جنى لازم تحط الكاردات  -->
+                         
+                        <div class="col-md-3">
+                            <div class="card product-card sh-card-width">
+                                <img src="../assests/shop/imgsp3.png" class="card-img-top product-card-img"
+                                    alt="Product">
+                                <div class="product-actions">
+
+                                    <button type="button" class="product-actions-color btn border border-1">
+                                        <i class="bi bi-lightning-fill"></i>
+                                    </button>
+
+                                    <button type="button" class="product-actions-color btn border border-1 "
+                                      data-id="124"
+                                         data-name="Dell Optiplex 9020 Small Form
+                                        Business Desktop"
+                                        data-image="../assests/shop/imgsp3.png"
+                                        data-price="169.3" onclick="AddFriendWish(
+                                        this.dataset.id,
+                                        this.dataset.name,
+                                        this.dataset.price,
+                                        this.dataset.image
+                                    )">
+                                        <i class="bi bi-heart-fill"></i>
+                                    </button>
+
+                                    <button type="button" class="product-actions-color btn border border-1 ">
+                                        <i class="bi bi-arrow-repeat"></i>
+                                    </button>
+
+                                    <button type="button" class="product-actions-color btn border border-1 ">
+                                        <i class="bi bi-eye-fill"></i>
+                                    </button>
+
+                                </div>
+                                <div class="card-body">
+                                    <a href="#" class="text-decoration-none new-color-2 me-2"> Apple</a>
+                                    <div class="card-tittle new-color fw-bold me-2">Dell Optiplex 9020 Small Form
+                                        Business Desktop</div>
+                                    <i class="bi bi-star-fill fill-color me-2 "></i><i
+                                        class="bi bi-star-fill fill-color "></i><i
+                                        class="bi bi-star-fill fill-color "></i><i
+                                        class="bi bi-star-fill fill-color "></i><i
+                                        class="bi bi-star-fill fill-color "></i>
+                                    <span class="new-color-2"> (65) </span>
+                                    <div class="prices mt-2 me-2"><span
+                                            class="new-price fw-bold new-color">$2856.3</span>
+                                        <del class="old-price new-color-2">$3225.6 </del>
+                                    </div>
+                                </div>
+                                <button class="btn btn-card m-2 border border-2  new-color fw-bold" type="button"
+                                    onclick="AddFriendToCart(
+                                    124,'Dell Optiplex 9020 Small Form Business Desktop',
+                                    2856.3,
+                                    '../assests/shop/imgsp3.png'
+                                )">
+                                    Add to cart</button>
+                                <span class=" new-color footercard me-2 mb-4">
+                                    27-inch (diagonal) Retina 5K display <br>
+                                    3.1GHz 6-core 10th-generation Intel Core i5 <br>
+                                    AMD Radeon Pro 5300 graphics
+                                    <span class="product-badge">17%</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ">
+                            <div class="card product-card sh-card-width">
+                                <img src="../assests/shop/imgsp3.png" class="card-img-top product-card-img"
+                                    alt="Product">
+                                <div class="product-actions">
+
+                                    <button type="button" class="product-actions-color btn border border-1">
+                                        <i class="bi bi-lightning-fill"></i>
+                                    </button>
+
+                                    <button type="button" class="product-actions-color btn border border-1 "
+                                      data-id="124"
+                                         data-name="Dell Optiplex 9020 Small Form
+                                        Business Desktop"
+                                        data-image="../assests/shop/imgsp3.png"
+                                        data-price="169.3" onclick="AddFriendWish(
+                                        this.dataset.id,
+                                        this.dataset.name,
+                                        this.dataset.price,
+                                        this.dataset.image
+                                    )">
+                                        <i class="bi bi-heart-fill"></i>
+                                    </button>
+
+                                    <button type="button" class="product-actions-color btn border border-1 ">
+                                        <i class="bi bi-arrow-repeat"></i>
+                                    </button>
+
+                                    <button type="button" class="product-actions-color btn border border-1 ">
+                                        <i class="bi bi-eye-fill"></i>
+                                    </button>
+
+                                </div>
+                                <div class="card-body">
+                                    <a href="#" class="text-decoration-none new-color-2 me-2"> Apple</a>
+                                    <div class="card-tittle new-color fw-bold me-2">Dell Optiplex 9020 Small Form
+                                        Business Desktop</div>
+                                    <i class="bi bi-star-fill fill-color me-2 "></i><i
+                                        class="bi bi-star-fill fill-color "></i><i
+                                        class="bi bi-star-fill fill-color "></i><i
+                                        class="bi bi-star-fill fill-color "></i><i
+                                        class="bi bi-star-fill fill-color "></i>
+                                    <span class="new-color-2"> (65) </span>
+                                    <div class="prices mt-2 me-2"><span
+                                            class="new-price fw-bold new-color">$2856.3</span>
+                                        <del class="old-price new-color-2">$3225.6 </del>
+                                    </div>
+                                </div>
+                                <button class="btn btn-card m-2 border border-2  new-color fw-bold" type="button"
+                                    onclick="AddFriendToCart(
+                                    124,'Dell Optiplex 9020 Small Form Business Desktop',
+                                    2856.3,
+                                    '../assests/shop/imgsp3.png'
+                                )">
+                                    Add to cart</button>
+                                <span class=" new-color footercard me-2 mb-4">
+                                    27-inch (diagonal) Retina 5K display <br>
+                                    3.1GHz 6-core 10th-generation Intel Core i5 <br>
+                                    AMD Radeon Pro 5300 graphics
+                                    <span class="product-badge">17%</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card product-card sh-card-width">
+                                <img src="../assests/shop/imgsp3.png" class="card-img-top product-card-img"
+                                    alt="Product">
+                                <div class="product-actions">
+
+                                    <button type="button" class="product-actions-color btn border border-1">
+                                        <i class="bi bi-lightning-fill"></i>
+                                    </button>
+
+                                    <button type="button" class="product-actions-color btn border border-1 "
+                                      data-id="124"
+                                         data-name="Dell Optiplex 9020 Small Form
+                                        Business Desktop"
+                                        data-image="../assests/shop/imgsp3.png"
+                                        data-price="169.3" onclick="AddFriendWish(
+                                        this.dataset.id,
+                                        this.dataset.name,
+                                        this.dataset.price,
+                                        this.dataset.image
+                                    )">
+                                        <i class="bi bi-heart-fill"></i>
+                                    </button>
+
+                                    <button type="button" class="product-actions-color btn border border-1 ">
+                                        <i class="bi bi-arrow-repeat"></i>
+                                    </button>
+
+                                    <button type="button" class="product-actions-color btn border border-1 ">
+                                        <i class="bi bi-eye-fill"></i>
+                                    </button>
+
+                                </div>
+                                <div class="card-body">
+                                    <a href="#" class="text-decoration-none new-color-2 me-2"> Apple</a>
+                                    <div class="card-tittle new-color fw-bold me-2">Dell Optiplex 9020 Small Form
+                                        Business Desktop</div>
+                                    <i class="bi bi-star-fill fill-color me-2 "></i><i
+                                        class="bi bi-star-fill fill-color "></i><i
+                                        class="bi bi-star-fill fill-color "></i><i
+                                        class="bi bi-star-fill fill-color "></i><i
+                                        class="bi bi-star-fill fill-color "></i>
+                                    <span class="new-color-2"> (65) </span>
+                                    <div class="prices mt-2 me-2"><span
+                                            class="new-price fw-bold new-color">$2856.3</span>
+                                        <del class="old-price new-color-2">$3225.6 </del>
+                                    </div>
+                                </div>
+                                <button class="btn btn-card m-2 border border-2  new-color fw-bold" type="button"
+                                    onclick="AddFriendToCart(
+                                    124,'Dell Optiplex 9020 Small Form Business Desktop',
+                                    2856.3,
+                                    '../assests/shop/imgsp3.png'
+                                )">
+                                    Add to cart</button>
+                                <span class=" new-color footercard me-2 mb-4">
+                                    27-inch (diagonal) Retina 5K display <br>
+                                    3.1GHz 6-core 10th-generation Intel Core i5 <br>
+                                    AMD Radeon Pro 5300 graphics
+                                    <span class="product-badge">17%</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card product-card sh-card-width">
+                                <img src="../assests/shop/imgsp3.png" class="card-img-top product-card-img"
+                                    alt="Product">
+                                <div class="product-actions">
+
+                                    <button type="button" class="product-actions-color btn border border-1">
+                                        <i class="bi bi-lightning-fill"></i>
+                                    </button>
+
+                                    <button type="button" class="product-actions-color btn border border-1 "
+                                      data-id="124"
+                                         data-name="Dell Optiplex 9020 Small Form
+                                        Business Desktop"
+                                        data-image="../assests/shop/imgsp3.png"
+                                        data-price="169.3" onclick="AddFriendWish(
+                                        this.dataset.id,
+                                        this.dataset.name,
+                                        this.dataset.price,
+                                        this.dataset.image
+                                    )">
+                                        <i class="bi bi-heart-fill"></i>
+                                    </button>
+
+                                    <button type="button" class="product-actions-color btn border border-1 ">
+                                        <i class="bi bi-arrow-repeat"></i>
+                                    </button>
+
+                                    <button type="button" class="product-actions-color btn border border-1 ">
+                                        <i class="bi bi-eye-fill"></i>
+                                    </button>
+
+                                </div>
+                                <div class="card-body">
+                                    <a href="#" class="text-decoration-none new-color-2 me-2"> Apple</a>
+                                    <div class="card-tittle new-color fw-bold me-2">Dell Optiplex 9020 Small Form
+                                        Business Desktop</div>
+                                    <i class="bi bi-star-fill fill-color me-2 "></i><i
+                                        class="bi bi-star-fill fill-color "></i><i
+                                        class="bi bi-star-fill fill-color "></i><i
+                                        class="bi bi-star-fill fill-color "></i><i
+                                        class="bi bi-star-fill fill-color "></i>
+                                    <span class="new-color-2"> (65) </span>
+                                    <div class="prices mt-2 me-2"><span
+                                            class="new-price fw-bold new-color">$2856.3</span>
+                                        <del class="old-price new-color-2">$3225.6 </del>
+                                    </div>
+                                </div>
+                                <button class="btn btn-card m-2 border border-2  new-color fw-bold" type="button"
+                                    onclick="AddFriendToCart(
+                                    124,'Dell Optiplex 9020 Small Form Business Desktop',
+                                    2856.3,
+                                    '../assests/shop/imgsp3.png'
+                                )">
+                                    Add to cart</button>
+                                <span class=" new-color footercard me-2 mb-4">
+                                    27-inch (diagonal) Retina 5K display <br>
+                                    3.1GHz 6-core 10th-generation Intel Core i5 <br>
+                                    AMD Radeon Pro 5300 graphics
+                                    <span class="product-badge">17%</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+
+            <div class="footer-column">
+
+                <a href="index.html" class="footer-logo">
+                    E<span>com</span>
+                </a>
+
+                <h3>Contact</h3>
+
+                <p>
+                    Address: 502 New Design Str, Melbourne,
+                    San Francisco, CA 94110, United States
+                </p>
+
+                <p>
+                    Phone: (+01) 123-456-789
+                </p>
+
+                <p>
+                    E-mail: support@ecom.com
+                </p>
+
+                <p>
+                    Hours: 8:00 - 17:00, Mon - Sat
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Make Money with Us</h3>
+
+                <a href="pages/about.html">
+                    Mission & Vision
+                </a>
+
+                <a href="pages/about.html">
+                    Our Team
+                </a>
+
+                <a href="pages/careers.html">
+                    Careers
+                </a>
+
+                <a href="#">
+                    Press & Media
+                </a>
+
+                <a href="#">
+                    Advertising
+                </a>
+
+                <a href="#">
+                    Testimonials
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Company</h3>
+
+                <a href="blog/index.html">
+                    Our Blog
+                </a>
+
+                <a href="#">
+                    Plans & Pricing
+                </a>
+
+                <a href="#">
+                    Knowledge Base
+                </a>
+
+                <a href="#">
+                    Cookie Policy
+                </a>
+
+                <a href="#">
+                    Office Center
+                </a>
+
+                <a href="blog/index.html">
+                    News & Events
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>My Account</h3>
+
+                <a href="dashboard/index.html">
+                    FAQs
+                </a>
+
+                <a href="dashboard/index.html">
+                    Editor Help
+                </a>
+
+                <a href="dashboard/index.html">
+                    Community
+                </a>
+
+                <a href="#">
+                    Live Chatting
+                </a>
+
+                <a href="contact/index.html">
+                    Contact Us
+                </a>
+
+                <a href="#">
+                    Support Center
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>App & Payment</h3>
+
+                <p>
+                    Download our Apps and get extra 15%
+                    Discount on your first Order!
+                </p>
+
+                <div class="app-buttons">
+
+                    <button>
+                        ▶ Google Play
+                    </button>
+
+                    <button>
+                         App Store
+                    </button>
+
+                </div>
+
+                <h4>
+                    Secured Payment Gateways
+                </h4>
+
+                <div class="payment-icons">
+                    💳 💳 💳 💳
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-brands">
+
+            <div class="container">
+
+                <strong>Electronic:</strong>
+
+                <span>Cell Phones</span>
+                <span>Headphones</span>
+                <span>Television & Video</span>
+                <span>Game Controller</span>
+                <span>Apple Watch</span>
+                <span>iPad</span>
+                <span>Keyboard</span>
+                <span>Samsung</span>
+                <span>Wireless Speaker</span>
+                <span>Gaming Mouse</span>
+
+            </div>
+
+
+            <div class="container">
+
+                <strong>Furniture:</strong>
+
+                <span>Sofa</span>
+                <span>Chair</span>
+                <span>Dining Table</span>
+                <span>Living Room</span>
+                <span>Table Lamp</span>
+                <span>Computer Desk</span>
+                <span>Night Stand</span>
+                <span>Kitchen</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+            Copyright © 2022 Ecom Market. All rights reserved.
+        </div>
+
+    </footer>
+    
+    <div id="toast"></div>
+
+
+
+
+    <script src="../JavaScript/shop.js"></script>
+    <script src="../JavaScript/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
